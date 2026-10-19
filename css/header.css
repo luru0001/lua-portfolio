@@ -227,7 +227,7 @@
   /* Større logo */
 
   .logo {
-    font-size: 70rem;
+    font-size: 7rem;
   }
 
   /* Navigation */
@@ -237,7 +237,7 @@
   }
 
   .main-navigation a {
-    font-size: 3rem;
+    font-size: 1rem;
     letter-spacing: 0.22em;
     transition: opacity 0.2s ease;
   }
