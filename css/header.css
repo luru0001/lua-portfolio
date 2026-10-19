@@ -229,6 +229,11 @@
   .logo {
     font-size: 9rem;
   }
+  .site-header .logo {
+    font-size: 9rem !important;
+    color: red !important;
+    outline: 2px solid lime !important;
+  }
 
   /* Navigation */
 
