@@ -1,0 +1,1238 @@
+/* ========================================
+   PROJEKTSIDE – GRUNDLÆGGENDE
+   MOBILE FIRST
+======================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.project-page {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background: #f5eddd;
+  color: #211b18;
+  font-family: var(--font-primary);
+}
+
+.project-page img {
+  display: block;
+  max-width: 100%;
+}
+
+.project-page figure {
+  margin: 0;
+}
+
+.project-page h1,
+.project-page h2,
+.project-page h3,
+.project-page p {
+  margin-top: 0;
+}
+
+/* ========================================
+   HERO – MOBIL
+======================================== */
+
+.project-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: flex-end;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+  background: #160609;
+  color: #fff0dc;
+}
+
+.project-hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15, 4, 5, 0.98) 0%,
+    rgba(15, 4, 5, 0.9) 38%,
+    rgba(15, 4, 5, 0.3) 75%,
+    rgba(15, 4, 5, 0.1) 100%
+  );
+}
+
+.project-hero-image {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% center;
+}
+
+.project-hero-content {
+  width: 100%;
+  margin: 0;
+  padding: 7rem 7% 2.5rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.3rem;
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.project-number,
+.section-kicker {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  line-height: 1.6;
+}
+
+.project-hero h1 {
+  margin-bottom: 0.7rem;
+  font-size: clamp(2.4rem, 11vw, 3.7rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.project-year {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+}
+
+.hero-divider {
+  display: block;
+  width: 45px;
+  height: 2px;
+  margin-bottom: 1.3rem;
+  background: currentColor;
+}
+
+.hero-description {
+  max-width: 300px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255, 240, 220, 0.85);
+}
+
+.scroll-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.8rem;
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  line-height: 1.8;
+}
+
+.scroll-circle {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.scroll-link:hover .scroll-circle {
+  background: #fff0dc;
+  color: #160609;
+}
+
+/* ========================================
+   OPGAVE OG LØSNING – MOBIL
+======================================== */
+
+.project-overview {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 3rem 7%;
+  background: #f5eddd;
+  color: #29231e;
+}
+
+.overview-column {
+  min-width: 0;
+  padding: 0 0 1.8rem;
+  border-right: none;
+  border-bottom: 1px solid rgba(41, 35, 30, 0.25);
+}
+
+.overview-column:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.overview-column h2 {
+  margin-bottom: 0.7rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.small-divider {
+  display: block;
+  width: 25px;
+  height: 2px;
+  margin-bottom: 1rem;
+  background: #29231e;
+}
+
+.overview-column > p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #5a5148;
+}
+
+.overview-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.detail-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #29231e;
+  border-radius: 5px;
+  font-size: 1.3rem;
+}
+
+.detail-item h3 {
+  margin-bottom: 0.2rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+}
+
+.detail-item p {
+  margin-bottom: 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #5a5148;
+}
+
+/* ========================================
+   FÆLLES OVERSKRIFTER
+======================================== */
+
+.section-heading {
+  margin-bottom: 2rem;
+}
+
+.section-heading .section-kicker {
+  color: #8a5b3d;
+}
+
+.section-heading h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 8vw, 3rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.section-divider {
+  display: block;
+  width: 55px;
+  height: 2px;
+  background: #8a5b3d;
+}
+
+/* ========================================
+   KONCEPT OG IDÉ – MOBIL
+   MØRK BORDEAUX
+======================================== */
+
+.concept-section {
+  padding: 3.5rem 6%;
+  background: #160609;
+  color: #fff0dc;
+}
+
+.concept-section .section-heading .section-kicker {
+  color: #c3a58a;
+}
+
+.concept-section .section-heading h2 {
+  color: #fff0dc;
+}
+
+.concept-section .section-divider {
+  background: #c3a58a;
+}
+
+.concept-intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.concept-intro p {
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: rgba(255, 240, 220, 0.82);
+}
+
+/* Hotel og moodboard uden ekstra baggrund */
+
+.concept-images {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.concept-image,
+.concept-image img {
+  background: transparent;
+}
+
+.concept-image img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+
+.concept-image figcaption {
+  margin-top: 0.8rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  line-height: 1.6;
+  color: #c3a58a;
+}
+/* Mobil – mindre billede */
+.concept-building img {
+  width: 75%;
+  margin: 0 auto;
+  display: block;
+}
+/* ========================================
+   FARVEPALETTE – MOBIL
+======================================== */
+
+.palette-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(255, 240, 220, 0.25);
+}
+
+.palette-section h3 {
+  margin-bottom: 0.6rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #fff0dc;
+}
+
+.palette-section p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(255, 240, 220, 0.75);
+}
+
+.color-palette {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.45rem;
+}
+
+.color-swatch {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-width: 0;
+  font-size: 0.48rem;
+  letter-spacing: 0;
+  color: #fff0dc;
+}
+
+.swatch-color {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.2;
+  border: 1px solid rgba(255, 240, 220, 0.15);
+}
+
+/* ========================================
+   SKITSER – MOBIL
+   CREME
+======================================== */
+
+.process-section {
+  padding: 3.5rem 6%;
+  background: #f5eddd;
+  color: #211b18;
+}
+
+.process-section .section-heading .section-kicker {
+  color: #8a5b3d;
+}
+
+.process-section .section-heading h2 {
+  color: #211b18;
+}
+
+.process-section .section-divider {
+  background: #8a5b3d;
+}
+
+.process-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.process-column {
+  min-width: 0;
+}
+
+.process-block h3,
+.poster-heading h3 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.process-block > p {
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #51483f;
+}
+
+/* Skitsebilleder uden ekstra baggrund */
+
+.sketch-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.sketch-grid figure,
+.sketch-grid img {
+  background: transparent;
+}
+
+.sketch-grid img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+}
+
+.sketch-grid figcaption,
+.detail-image-grid figcaption,
+.final-poster figcaption {
+  margin-top: 0.8rem;
+  font-size: 0.5rem;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  color: #71665b;
+}
+
+/* ========================================
+   DETALJER – BORDEAUX
+======================================== */
+
+.details-block {
+  margin-top: 2.5rem;
+  padding: 2rem 1rem;
+  border-top: 1px solid rgba(255, 240, 220, 0.25);
+  border-radius: 2px;
+  background: #160609;
+  color: #fff0dc;
+}
+
+.details-block h3 {
+  color: #fff0dc;
+}
+
+.details-block > p {
+  color: rgba(255, 240, 220, 0.82);
+}
+
+.detail-image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.detail-image-grid figure,
+.detail-image-grid img {
+  background: transparent;
+}
+
+.detail-image-grid img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+}
+
+.detail-image-grid figcaption {
+  font-size: 0.5rem;
+  color: #c3a58a;
+}
+
+/* ========================================
+   FÆRDIG PLAKAT – CREME
+======================================== */
+
+.final-poster {
+  min-width: 0;
+  padding: 1rem;
+  background: #f5eddd;
+  color: #211b18;
+}
+
+.poster-heading {
+  margin-bottom: 1.5rem;
+}
+
+.poster-heading .section-kicker {
+  color: #8a5b3d;
+}
+
+.final-poster figure {
+  position: static;
+  background: transparent;
+}
+
+.final-poster figure img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  background: transparent;
+}
+
+.final-poster figcaption {
+  text-align: center;
+}
+
+/* ========================================
+   AFSLUTNING – BORDEAUX
+======================================== */
+
+.project-end {
+  padding: 4rem 1.5rem;
+  text-align: center;
+  background: #160609;
+  color: #fff0dc;
+}
+
+.project-end .section-kicker {
+  color: #c3a58a;
+}
+
+.project-end h2 {
+  margin-bottom: 2rem;
+  font-size: clamp(2rem, 8vw, 3rem);
+  font-weight: 400;
+}
+
+.back-to-portfolio {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  border: 1px solid rgba(255, 240, 220, 0.6);
+  color: #fff0dc;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.back-to-portfolio:hover {
+  background: #fff0dc;
+  color: #160609;
+}
+
+/* ========================================
+   TABLET – FRA 600 PX
+======================================== */
+
+/* ========================================
+   TABLET – FRA 600 PX
+======================================== */
+
+@media (min-width: 600px) {
+  /* HERO */
+
+  .project-hero {
+    min-height: 650px;
+    min-height: 85svh;
+    align-items: center;
+  }
+
+  .project-hero::after {
+    background: linear-gradient(
+      90deg,
+      rgba(15, 4, 5, 0.98) 0%,
+      rgba(15, 4, 5, 0.88) 35%,
+      rgba(15, 4, 5, 0.35) 65%,
+      rgba(15, 4, 5, 0.05) 100%
+    );
+  }
+
+  .project-hero-content {
+    width: 50%;
+    margin-left: 5%;
+    padding: 6rem 0 3rem;
+  }
+
+  .project-hero h1 {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+  }
+
+  /* OPGAVE OG LØSNING */
+
+  .project-overview {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 3.5rem 5%;
+  }
+
+  .overview-column:nth-child(2) {
+    padding-right: 0;
+    border-right: none;
+  }
+
+  .overview-details {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(41, 35, 30, 0.25);
+  }
+
+  /* KONCEPT OG IDÉ */
+
+  .concept-section {
+    padding: 4rem 5%;
+  }
+
+  .concept-intro {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  .concept-images {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    align-items: start;
+  }
+
+  /* Bygningen – større på tablet */
+
+  .concept-building img {
+    width: 100%;
+    height: 360px;
+    max-height: none;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  /* Moodboard */
+
+  .concept-image:not(.concept-building) img {
+    width: 100%;
+    height: 260px;
+    max-height: 260px;
+    object-fit: contain;
+  }
+
+  /* FARVEPALETTE */
+
+  .palette-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .color-swatch {
+    font-size: 0.6rem;
+    letter-spacing: 0.04em;
+  }
+
+  /* DESIGNPROCESSEN */
+
+  .process-section {
+    padding: 4rem 5%;
+  }
+
+  .process-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .details-block {
+    padding: 2rem;
+  }
+
+  .sketch-grid,
+  .detail-image-grid {
+    gap: 0.8rem;
+  }
+
+  .sketch-grid figcaption,
+  .detail-image-grid figcaption {
+    font-size: 0.6rem;
+  }
+
+  .final-poster {
+    padding: 1.5rem;
+  }
+}
+
+/* ========================================
+   DESKTOP – FRA 1200 PX
+======================================== */
+
+@media (min-width: 1200px) {
+  /* ========================================
+     HERO
+  ======================================== */
+
+  .project-hero {
+    min-height: 85svh;
+    align-items: center;
+  }
+
+  .project-hero-content {
+    width: min(480px, 43%);
+    margin-left: 5%;
+  }
+
+  .project-hero h1 {
+    font-size: clamp(3.5rem, 4.3vw, 4.5rem);
+  }
+
+  /* ========================================
+     OPGAVE OG LØSNING
+  ======================================== */
+
+  .project-overview {
+    grid-template-columns: 1fr 1.2fr 1.15fr;
+    gap: 2rem;
+    padding: 3.5rem 5%;
+  }
+
+  .overview-column {
+    padding-right: 1.5rem;
+    border-right: 1px solid rgba(41, 35, 30, 0.4);
+    border-bottom: none;
+  }
+
+  .overview-column:nth-child(2) {
+    padding-right: 1.5rem;
+    border-right: 1px solid rgba(41, 35, 30, 0.4);
+  }
+
+  .overview-column:last-child {
+    padding-right: 0;
+    border-right: none;
+  }
+
+  .overview-details {
+    grid-column: auto;
+    display: flex;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  /* ========================================
+     KONCEPT OG IDÉ
+  ======================================== */
+
+  .concept-section {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 3.5rem;
+    align-items: start;
+    padding: 5rem 7%;
+  }
+
+  .concept-section > .section-heading,
+  .concept-section > .concept-intro {
+    grid-column: 1 / -1;
+  }
+
+  .concept-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 3.5rem;
+    margin-bottom: 3rem;
+  }
+
+  /* Højre introduktion flugter med højre indhold */
+
+  .concept-intro p:nth-child(2) {
+    padding-left: 2rem;
+  }
+
+  /* ========================================
+     BYGNING OG MOODBOARD
+  ======================================== */
+
+  .concept-section > .concept-images {
+    grid-column: 1;
+    grid-row: 3;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 1.5rem;
+
+    padding-right: 2rem;
+  }
+
+  .concept-image,
+  .concept-image img {
+    background: transparent;
+  }
+
+  .concept-image img {
+    width: 100%;
+    height: 280px;
+    max-height: 280px;
+    object-fit: contain;
+  }
+
+  .concept-image figcaption {
+    margin-top: 0.8rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    line-height: 1.6;
+    color: #c3a58a;
+  }
+
+  /* ========================================
+     FARVEPALETTE – HØJRE SIDE
+  ======================================== */
+
+  .concept-section > .palette-section {
+    position: relative;
+    grid-column: 2;
+    grid-row: 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+
+    margin: 0;
+    padding: 0 0 0 2rem;
+    border: none;
+  }
+
+  .palette-section h3 {
+    margin-bottom: 0.6rem;
+  }
+
+  .palette-section p {
+    margin-bottom: 0;
+  }
+
+  .concept-section .color-palette {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .concept-section .color-swatch {
+    min-width: 0;
+    font-size: 0.6rem;
+    letter-spacing: 0.04em;
+  }
+
+  .concept-section .swatch-color {
+    width: 100%;
+    aspect-ratio: 1 / 1.2;
+  }
+
+  /* ========================================
+     STREG MELLEM KONCEPTETS KOLONNER
+  ======================================== */
+
+  .concept-section::after {
+    content: "";
+    position: absolute;
+    top: 11rem;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    background: rgba(255, 240, 220, 0.3);
+    pointer-events: none;
+  }
+
+  /* ========================================
+     PROCES – SKITSER OG DETALJER ØVERST
+  ======================================== */
+
+  .process-section {
+    padding: 5rem 7%;
+  }
+
+  .process-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-items: start;
+    column-gap: 3rem;
+    row-gap: 4rem;
+  }
+
+  /* SKITSER – ØVERST TIL VENSTRE */
+
+  .process-column {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+  }
+
+  .sketch-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .sketch-grid figure,
+  .sketch-grid img {
+    background: transparent;
+  }
+
+  .sketch-grid img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: contain;
+  }
+  /* DETALJER – ØVERST TIL HØJRE */
+
+  .details-block {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    min-width: 0;
+
+    margin-top: 0;
+    padding: 2rem;
+
+    background: #160609;
+    color: #fff0dc;
+  }
+
+  .details-block h3 {
+    color: #fff0dc;
+  }
+
+  .details-block > p {
+    color: rgba(255, 240, 220, 0.82);
+  }
+
+  .detail-image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .detail-image-grid figure,
+  .detail-image-grid img {
+    background: transparent;
+  }
+
+  .detail-image-grid img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: contain;
+  }
+
+  .sketch-grid figcaption,
+  .detail-image-grid figcaption {
+    margin-top: 0.8rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+  }
+
+  /* FÆRDIG PLAKAT – NEDENUNDER */
+
+  .final-poster {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    min-width: 0;
+    padding: 2rem 0;
+    background: transparent;
+  }
+
+  .poster-heading {
+    margin-bottom: 1.5rem;
+  }
+
+  .final-poster figure {
+    position: static;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .final-poster figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
+
+  .final-poster figcaption {
+    text-align: center;
+  }
+
+  /* ========================================
+     AFSLUTNING
+  ======================================== */
+
+  .project-end {
+    padding: 5rem 1.5rem;
+  }
+
+  .project-end h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+  }
+}
+
+/* ----------------- De 2 knapper øverst ----------------- */
+
+/* ========================================
+   RESULTAT / PROCESS – PROJEKTKNAPPER
+======================================== */
+
+.project-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 2rem 6%;
+  background: #f5eddd;
+  color: #211b18;
+}
+
+.project-tab {
+  flex: 1;
+  padding: 1rem 1.25rem;
+  border: 1px solid #160609;
+  background: transparent;
+  color: #160609;
+  font-family: inherit;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.project-tab:hover,
+.project-tab[aria-selected="true"] {
+  background: #160609;
+  color: #fff0dc;
+}
+
+.project-tab:focus-visible {
+  outline: 3px solid #8a5b3d;
+  outline-offset: 3px;
+}
+
+/* Skjul den visning, der ikke er valgt */
+
+.project-tab-panel[hidden] {
+  display: none !important;
+}
+
+/* ========================================
+   RESULTAT – STANDARDVISNING
+======================================== */
+
+.result-panel {
+  padding: 2rem 6% 4rem;
+  background: #f5eddd;
+  color: #211b18;
+}
+
+.result-heading {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.result-heading .section-kicker {
+  color: #8a5b3d;
+}
+
+.result-heading h2 {
+  margin-bottom: 0;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 400;
+}
+
+.result-image {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.result-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ========================================
+   TABLET – FRA 600 PX
+======================================== */
+
+@media (min-width: 600px) {
+  .project-tabs {
+    gap: 1rem;
+    padding: 2rem 5%;
+  }
+
+  .project-tab {
+    flex: 0 1 220px;
+  }
+
+  /* Bygningen større på tablet */
+
+  .concept-building img {
+    width: 100%;
+    height: 360px;
+    max-height: none;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  /* Moodboard */
+
+  .concept-image:not(.concept-building) img {
+    width: 100%;
+    height: 260px;
+    max-height: 260px;
+    object-fit: contain;
+  }
+}
+
+/* ========================================
+   DESKTOP – FRA 1200 PX
+======================================== */
+
+@media (min-width: 1200px) {
+  .project-tabs {
+    padding: 2.5rem 7% 1.5rem;
+  }
+
+  .result-panel {
+    padding: 2rem 7% 5rem;
+  }
+
+  .result-image {
+    max-width: 700px;
+  }
+
+  /* Gør plakaten mindre i processvisningen */
+
+  .final-poster figure {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+/* Respekter brugerens indstilling for reduceret bevægelse */
+
+@media (prefers-reduced-motion: reduce) {
+  .project-tab {
+    transition: none;
+  }
+}
+
+/* ========================================
+   RESULTAT – CENTRER BILLEDET
+======================================== */
+
+.result-panel {
+  width: 100%;
+  text-align: center;
+}
+
+.result-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+}
+
+.result-image img {
+  display: block;
+  width: 90%;
+  max-width: 850px;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  .result-image img {
+    width: 90%;
+    max-width: 1500px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .result-image img {
+    width: 90%;
+    max-width: 1100px;
+  }
+}

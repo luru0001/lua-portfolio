@@ -1,0 +1,286 @@
+/* ========================================
+   PORTFOLIO – GRUNDLÆGGENDE
+======================================== */
+
+body {
+  margin: 0;
+  background-color: #160609;
+  color: #fff0dc;
+  font-family: var(--font-primary);
+}
+
+.portfolio-page {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  padding: 3rem 5.5% 4rem;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 100% 12%,
+      rgba(255, 45, 0, 0.5) 0%,
+      rgba(125, 10, 15, 0.25) 23%,
+      transparent 48%
+    ),
+    #160609;
+}
+
+/* ========================================
+   OVERSKRIFT OG INTRO
+======================================== */
+
+.projects-intro {
+  position: relative;
+  z-index: 1;
+  margin: 4rem 0 2.5rem;
+}
+
+.projects-intro h1 {
+  margin: 0;
+  font-size: clamp(2.6rem, 9vw, 4rem);
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+/* Streg under overskriften */
+
+.intro-line {
+  width: 85%;
+  max-width: 420px;
+  height: 2px;
+  margin: 1rem 0 1.5rem;
+  background-color: #fff0dc;
+}
+
+/* Beskrivende tekst */
+
+.projects-intro p {
+  max-width: 480px;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+  color: rgba(255, 240, 220, 0.85);
+}
+
+/* ========================================
+   PROJEKTKORT – MOBIL
+======================================== */
+
+.projects-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+
+.project-card {
+  position: relative;
+  display: block;
+  min-width: 0;
+  aspect-ratio: 1.5 / 1;
+  overflow: hidden;
+  border: 1px solid rgba(255, 240, 220, 0.35);
+  border-radius: 13px;
+  color: #fff0dc;
+  text-decoration: none;
+  background-color: #1d1013;
+}
+
+/* Mørk overgang nederst på billederne */
+
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(12, 3, 5, 0.96) 0%,
+    rgba(12, 3, 5, 0.5) 27%,
+    transparent 65%
+  );
+  pointer-events: none;
+}
+
+/* Projektbilleder */
+
+.project-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Tekst på projektkortene */
+
+.project-info {
+  position: absolute;
+  z-index: 1;
+  left: 4%;
+  right: 18%;
+  bottom: 7%;
+}
+
+.project-info span {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  line-height: 1.4;
+}
+
+.project-info h2 {
+  margin: 0;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+/* Rund pil på hvert kort */
+
+.project-arrow {
+  position: absolute;
+  z-index: 2;
+  right: 4%;
+  bottom: 6%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #fff0dc;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+/* ========================================
+   HOVER-EFFEKT
+======================================== */
+
+@media (hover: hover) {
+  .project-card:hover img {
+    transform: scale(1.04);
+  }
+
+  .project-card:hover .project-arrow {
+    background-color: #fff0dc;
+    color: #160609;
+  }
+}
+
+/* ========================================
+   TABLET – 2 KORT VED SIDEN AF HINANDEN
+======================================== */
+
+@media (min-width: 600px) {
+  .portfolio-page {
+    padding: 3rem 4% 4rem;
+  }
+
+  .projects-intro {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
+
+  .projects-intro h1 {
+    font-size: clamp(4rem, 6vw, 6rem);
+  }
+
+  .intro-line {
+    width: min(100%, 510px);
+  }
+
+  .projects-intro p {
+    font-size: 1.15rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .project-card {
+    aspect-ratio: 1.15 / 1;
+  }
+
+  .project-info span {
+    font-size: clamp(0.65rem, 1.3vw, 0.85rem);
+  }
+
+  .project-info h2 {
+    font-size: clamp(1.1rem, 2.4vw, 1.8rem);
+  }
+
+  .project-arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 1.5rem;
+  }
+}
+
+/* ========================================
+   COMPUTER – 3 KORT VED SIDEN AF HINANDEN
+======================================== */
+
+@media (min-width: 1200px) {
+  body {
+    margin: 0;
+    width: 100%;
+    background-color: #160609;
+  }
+
+  .portfolio-page {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 2rem 7% 5rem;
+    box-sizing: border-box;
+  }
+
+  .projects-intro {
+    margin-top: 5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .project-card {
+    aspect-ratio: 1.15 / 1;
+  }
+
+  .project-info span {
+    font-size: 0.8rem;
+  }
+
+  .project-info h2 {
+    font-size: clamp(1.3rem, 1.8vw, 2rem);
+  }
+}
+
+/* ========================================
+   TILGÆNGELIGHED
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card img,
+  .project-arrow {
+    transition: none;
+  }
+}

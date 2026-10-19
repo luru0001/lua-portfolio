@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/svg+xml" href="img/header-footer/logo.svg" />
+
+    <title>LUA PORTFOLIO</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/generel.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aboreto&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Dela+Gothic+One&family=Delius&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Patrick+Hand&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rokkitt:ital,wght@0,400..900;1,400..900&family=Sigmar+One&family=Story+Script&family=Walter+Turncoat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <a href="index.html" class="logo" aria-label="LUA – forsiden"> LUA </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Åbn menu"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-navigation" id="main-navigation">
+        <ul>
+          <li>
+            <a href="portfolio.html">Portfolio</a>
+          </li>
+          <li>
+            <a href="cv.html">CV</a>
+          </li>
+          <li>
+            <a href="kontakt.html">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO / FORSIDE -->
+      <section class="hero" aria-label="LUA portfolio forside">
+        <!-- Plade og pige -->
+        <img
+          class="hero-pic"
+          src="img/front-pic.svg"
+          alt=""
+          aria-hidden="true"
+        />
+
+        <!-- LUA og SKOV RUDKJØBING -->
+        <img
+          class="hero-text"
+          src="img/front-text-b.svg"
+          alt="LUA – Skov Rudkjøbing. Portfolio"
+        />
+
+        <!-- Portfolio-streg, tekst og pil -->
+        <div class="hero-portfolio">
+          <span class="portfolio-line"></span>
+
+          <a href="portfolio.html" class="portfolio-link"> PORTFOLIO </a>
+
+          <a
+            href="portfolio.html"
+            class="portfolio-arrow"
+            aria-label="Gå til portfolio"
+          >
+            <span></span>
+          </a>
+        </div>
+      </section>
+
+      <!-- CV -->
+      <section id="cv">
+        <!-- CV-indhold kommer her -->
+      </section>
+
+      <!-- KONTAKT -->
+      <section id="kontakt">
+        <!-- Kontaktindhold kommer her -->
+      </section>
+    </main>
+
+    <!-- JavaScript til header og burger-menu -->
+    <script src="js/header.js"></script>
+  </body>
+</html>

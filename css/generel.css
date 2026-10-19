@@ -1,0 +1,111 @@
+:root {
+  /* Baggrund */
+  --color-bg-primary: #ddcdb3;
+
+  /* Farver */
+  --color-red: #a62525;
+  --color-text-primary: #202020;
+  --color-text-secondary: #a62525;
+
+  /* Font */
+  --font-primary: "Inter", sans-serif;
+
+  /* Border radius */
+  --radius-small: 0.5rem;
+  --radius-medium: 2rem;
+}
+/* BREDDE I MAIN */
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* --- tablet ---*/
+@media (min-width: 768px) {
+  main {
+    padding: 0 3rem;
+  }
+}
+/* --- desktop ---*/
+@media (min-width: 1024px) {
+  main {
+    padding: 0 1.5rem;
+  }
+  .page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 3rem;
+  }
+}
+/* --------- FONT---------*/
+body {
+  background-color: var(--color-bg-primary);
+  font-family: var(--font-primary);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 1.85rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+/* --------- CTA---------*/
+
+/* --------- TABLET ---------*/
+@media (min-width: 768px) {
+  /* --------- FONT---------*/
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+  }
+}
+/* --------- DESKTOP ---------*/
+@media (min-width: 1024px) {
+  /* --------- FONT---------*/
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  p {
+    font-size: 1.25rem;
+  }
+
+  /* --------- CTA---------*/
+}

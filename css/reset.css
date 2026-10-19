@@ -1,0 +1,55 @@
+/* --- gør at padding og border regnes med i et elements samlede bredde og højde --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* --- fjerner standard margin så man selv styrer alt spacing ---*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+}
+
+/*--- giver teksten mere luft mellem linjerne ---*/
+body {
+  line-height: 1.5;
+}
+
+/* -- fjerner inline og ekstra whitespace og gør så de ikke bliver bredere end deres container ---*/
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* --- bryder teksten med linjeskift når vinduet bliver smallere ---*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* --- fjerne understregning fra links ---*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* --- vises uden bullets og uden venstre indrykning ---*/
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}

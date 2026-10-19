@@ -1,0 +1,234 @@
+/* ------- Forside HEADER ------- */
+
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.25rem 1.5rem;
+  color: #f7eee4;
+}
+
+/* Logo */
+
+.logo {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.12em;
+  color: inherit;
+}
+
+/* Burger-menu */
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+/* Burger bliver til et kryds */
+
+.menu-toggle[aria-expanded="true"] span:first-child {
+  transform: translateY(4.5px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] span:last-child {
+  transform: translateY(-4.5px) rotate(-45deg);
+}
+
+/* Navigation på mobil */
+
+.main-navigation {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+
+  padding: 1.5rem;
+  background-color: #1d1013;
+
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-8px);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s ease;
+}
+
+.main-navigation.is-open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.main-navigation ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.main-navigation a {
+  display: block;
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  min-height: 75vh;
+  padding: 7rem 1.5rem 3rem;
+
+  color: #f7eee4;
+
+  background-image:
+    linear-gradient(to bottom, rgb(20 8 12 / 15%), rgb(20 8 12 / 35%)),
+    url("../images/hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.hero p {
+  margin-top: 1rem;
+}
+
+/* ---------- TABLET ---------- */
+
+@media (min-width: 768px) {
+  .site-header {
+    padding: 1.5rem 3rem;
+  }
+
+  .logo {
+    font-size: 3rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-navigation {
+    position: static;
+    width: auto;
+    padding: 0;
+
+    background: transparent;
+
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+
+  .main-navigation ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .main-navigation a {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+  }
+
+  .hero {
+    min-height: 80vh;
+    padding: 9rem 3rem 4rem;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* ---------- COMPUTER ---------- */
+
+@media (min-width: 1024px) {
+  .site-header {
+    padding: 1.5rem clamp(2rem, 4.5vw, 6rem);
+  }
+
+  .logo {
+    font-size: 3.5rem;
+  }
+
+  .main-navigation ul {
+    gap: clamp(2.5rem, 3.5vw, 5rem);
+  }
+
+  .main-navigation a {
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+  }
+
+  .main-navigation a:hover {
+    opacity: 0.7;
+  }
+
+  .hero {
+    min-height: 100vh;
+    padding: 10rem 4.5rem 5rem;
+  }
+
+  .hero h1 {
+    font-size: 4.5rem;
+  }
+}
+
+/* Respekter brugerens indstilling for reduceret animation */
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-toggle span,
+  .main-navigation {
+    transition: none;
+  }
+}

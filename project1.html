@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="img/header-footer/logo.svg" />
+    <title>Danskernes Nærområde | LUA Portfolio</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/generel.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/project.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aboreto&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Dela+Gothic+One&family=Delius&family=Inter:wght@100..900&family=Krona+One&family=Lora:wght@400..700&family=Montserrat:wght@100..900&family=Noto+Serif:wght@100..900&family=Playfair+Display:wght@400..900&family=Raleway:wght@100..900&family=Roboto:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <a href="index.html" class="logo" aria-label="LUA – forsiden">LUA</a>
+      <button
+        class="menu-toggle"
+        aria-label="Åbn menu"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        <span></span><span></span>
+      </button>
+      <nav class="main-navigation" id="main-navigation">
+        <ul>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="project-page">
+      <section class="project-hero">
+        <img
+          class="project-hero-image"
+          src="img/1/header.webp"
+          alt="Danskernes Nærområde – plakat ved bygningens facade"
+        />
+        <div class="project-hero-content">
+          <a href="portfolio.html" class="back-link">← TILBAGE TIL PROJEKTER</a>
+          <span class="project-number">01 / 06</span>
+          <h1>DANSKERNES<br />NÆROMRÅDE</h1>
+          <p class="project-year">2024</p>
+          <span class="hero-divider"></span>
+          <p class="hero-description">
+            Plakatdesign af et nærområde i samarbejde med Nationalmuseet.
+          </p>
+          <a href="#projektvisning" class="scroll-link">
+            <span class="scroll-circle">↓</span>
+            <span>SCROLL NED<br />FOR AT UDFORSKE PROJEKTET</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="project-overview" aria-label="Projektoversigt">
+        <article class="overview-column">
+          <h2>OPGAVE</h2>
+          <span class="small-divider"></span>
+          <p>Plakatdesign af et nærområde i samarbejde med Nationalmuseet.</p>
+        </article>
+
+        <article class="overview-column">
+          <h2>LØSNING</h2>
+          <span class="small-divider"></span>
+          <p>
+            Plakat af Hotel Savoy (tidligere Løvenborg) på Vesterbrogade,
+            designet i Art Nouveau-stil for at matche bygningens arkitektur.
+            Originale farver er forstærket, og selvdesignede Art
+            Nouveau-elementer er tilføjet.
+          </p>
+        </article>
+
+        <article class="overview-column overview-details">
+          <div class="detail-item">
+            <span class="detail-icon">Ai</span>
+            <div>
+              <h3>SOFTWARE</h3>
+              <p>Adobe Illustrator</p>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">◷</span>
+            <div>
+              <h3>TIDSRAMME</h3>
+              <p>4 dage – idéudvikling, design og produktion.</p>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">♧</span>
+            <div>
+              <h3>SAMARBEJDE</h3>
+              <p>Nationalmuseet</p>
+            </div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">M</span>
+            <div>
+              <h3>TYPE</h3>
+              <p>Plakatdesign</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- KNAPPER -->
+      <div
+        class="project-tabs"
+        id="projektvisning"
+        role="tablist"
+        aria-label="Vælg projektvisning"
+      >
+        <button
+          class="project-tab"
+          id="tab-resultat"
+          type="button"
+          role="tab"
+          aria-selected="true"
+          aria-controls="panel-resultat"
+          data-tab="resultat"
+        >
+          Resultat
+        </button>
+        <button
+          class="project-tab"
+          id="tab-process"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="panel-process"
+          data-tab="process"
+        >
+          Process
+        </button>
+      </div>
+
+      <!-- RESULTAT: VISES FØRST -->
+      <section
+        class="project-tab-panel result-panel"
+        id="panel-resultat"
+        role="tabpanel"
+        aria-labelledby="tab-resultat"
+        data-panel="resultat"
+      >
+        <div class="result-heading">
+          <span class="section-kicker">DET FÆRDIGE RESULTAT</span>
+          <h2>DANSKERNES NÆROMRÅDE</h2>
+        </div>
+        <figure class="result-image">
+          <img
+            src="img/1/ramme.webp"
+            alt="Det færdige plakatdesign Danskernes Nærområde i en ramme"
+            loading="lazy"
+          />
+        </figure>
+      </section>
+
+      <!-- PROCESS: VISES NÅR MAN TRYKKER PÅ PROCESS -->
+      <div
+        class="project-tab-panel"
+        id="panel-process"
+        role="tabpanel"
+        aria-labelledby="tab-process"
+        data-panel="process"
+        hidden
+      >
+        <section class="concept-section" id="koncept">
+          <div class="section-heading">
+            <span class="section-kicker">01 — PROCESSEN</span>
+            <h2>KONCEPT &amp; IDÉ</h2>
+            <span class="section-divider"></span>
+          </div>
+
+          <div class="concept-intro">
+            <p>
+              Målet med projektet var at skabe en plakat, der formidler
+              bygningens historie og arkitektoniske særpræg. Jeg tog
+              udgangspunkt i Hotel Savoys facade og arbejdede med Art Nouveau
+              som visuel inspiration.
+            </p>
+            <p>
+              Jeg ønskede at bevare bygningens karakter, samtidig med at jeg
+              fremhævede de dekorative detaljer, farver og former. Resultatet
+              blev en plakat, hvor arkitekturen og de grafiske elementer spiller
+              sammen.
+            </p>
+          </div>
+
+          <div class="concept-images">
+            <figure class="concept-image concept-building">
+              <img
+                src="img/1/hotel.webp"
+                alt="Hotel Savoys facade og arkitektur"
+                loading="lazy"
+              />
+              <figcaption>BYGNINGEN — MIT VISUELLE UDGANGSPUNKT</figcaption>
+            </figure>
+            <figure class="concept-image">
+              <img
+                src="img/1/moodboard.webp"
+                alt="Moodboard med inspiration til plakatens stil og farver"
+                loading="lazy"
+              />
+              <figcaption>MOODBOARD — INSPIRATION OG STEMNING</figcaption>
+            </figure>
+          </div>
+
+          <div class="palette-section">
+            <div>
+              <span class="section-kicker">VISUEL IDENTITET</span>
+              <h3>FARVEPALETTE</h3>
+              <p>
+                Farver inspireret af bygningens facade og de dekorative
+                detaljer.
+              </p>
+            </div>
+            <div class="color-palette" aria-label="Farvepalette">
+              <div class="color-swatch">
+                <span
+                  class="swatch-color"
+                  style="background-color: #d7e8b5"
+                ></span
+                ><span>GRØN</span>
+              </div>
+              <div class="color-swatch">
+                <span
+                  class="swatch-color"
+                  style="background-color: #648b60"
+                ></span
+                ><span>SKOVGRØN</span>
+              </div>
+              <div class="color-swatch">
+                <span
+                  class="swatch-color"
+                  style="background-color: #e5c58a"
+                ></span
+                ><span>OKKER</span>
+              </div>
+              <div class="color-swatch">
+                <span
+                  class="swatch-color"
+                  style="background-color: #f5e8c9"
+                ></span
+                ><span>CREME</span>
+              </div>
+              <div class="color-swatch">
+                <span
+                  class="swatch-color"
+                  style="background-color: #34251e"
+                ></span
+                ><span>MØRK BRUN</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="process-section">
+          <div class="section-heading">
+            <span class="section-kicker">02 — FRA SKITSE TIL RESULTAT</span>
+            <h2>DESIGNPROCESSEN</h2>
+            <span class="section-divider"></span>
+          </div>
+
+          <div class="process-layout">
+            <div class="process-column">
+              <div class="process-block">
+                <h3>SKITSER</h3>
+                <p>
+                  Processen startede med håndskitser, hvor jeg undersøgte
+                  bygningens struktur, ornamenter og typografi. Derefter
+                  udviklede jeg de grafiske elementer digitalt i Adobe
+                  Illustrator.
+                </p>
+              </div>
+              <div class="sketch-grid">
+                <figure>
+                  <img
+                    src="img/1/skitse1.webp"
+                    alt="Første skitse af bygningens udtryk"
+                    loading="lazy"
+                  />
+                </figure>
+                <figure>
+                  <img
+                    src="img/1/skitse2.webp"
+                    alt="Skitse af facade og ornamenter"
+                    loading="lazy"
+                  />
+                </figure>
+                <figure>
+                  <img
+                    src="img/1/skitse3.webp"
+                    alt="Skitse af plakatens komposition"
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+            </div>
+
+            <div class="details-block">
+              <h3>DETALJER</h3>
+              <p>
+                Jeg arbejdede med små detaljer inspireret af Art Nouveau, blandt
+                andet Løvenborg-symbolet, søjler og vinduer. Elementerne er med
+                til at fremhæve bygningens historiske udtryk.
+              </p>
+              <div class="detail-image-grid">
+                <figure>
+                  <img
+                    src="img/1/detail1.svg"
+                    alt="Dekorativt Løvenborg-symbol"
+                    loading="lazy"
+                  />
+                </figure>
+                <figure>
+                  <img
+                    src="img/1/detail2.svg"
+                    alt="Dekorativ søjle"
+                    loading="lazy"
+                  />
+                </figure>
+                <figure>
+                  <img
+                    src="img/1/detail3.webp"
+                    alt="Dekorative vinduer"
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+            </div>
+
+            <div class="final-poster">
+              <div class="poster-heading">
+                <span class="section-kicker">DET FÆRDIGE RESULTAT</span>
+                <h3>PLAKATDESIGN</h3>
+              </div>
+              <figure>
+                <img
+                  src="img/1/poster.webp"
+                  alt="Den færdige plakat for Danskernes Nærområde"
+                  loading="lazy"
+                />
+                <figcaption>DANSKERNES NÆROMRÅDE — 2024</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="project-end">
+        <span class="section-kicker">TAK FORDI DU KIGGEDE</span>
+        <h2>SE FLERE PROJEKTER</h2>
+        <a href="portfolio.html" class="back-to-portfolio"
+          >← TILBAGE TIL PORTFOLIO</a
+        >
+      </section>
+    </main>
+
+    <script src="js/header.js"></script>
+    <script src="js/project-tabs.js"></script>
+  </body>
+</html>
