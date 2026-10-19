@@ -1,4 +1,6 @@
-/* ------- Forside HEADER ------- */
+/* ========================================
+   HEADER – MOBIL
+======================================== */
 
 .site-header {
   position: absolute;
@@ -24,6 +26,7 @@
   line-height: 1;
   letter-spacing: -0.12em;
   color: inherit;
+  text-decoration: none;
 }
 
 /* Burger-menu */
@@ -96,16 +99,23 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .main-navigation a {
   display: block;
-  font-size: 0.9rem;
-  letter-spacing: 0.2em;
+  font-size: 0.95rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
+  color: inherit;
+  text-decoration: none;
 }
 
-/* ---------- HERO ---------- */
+/* ========================================
+   HERO – MOBIL
+======================================== */
 
 .hero {
   position: relative;
@@ -136,13 +146,18 @@
   font-family: Georgia, "Times New Roman", serif;
   font-size: 2.5rem;
   font-weight: 400;
+  line-height: 1.1;
 }
 
 .hero p {
   margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
-/* ---------- TABLET ---------- */
+/* ========================================
+   TABLET – FRA 768 PX
+======================================== */
 
 @media (min-width: 768px) {
   .site-header {
@@ -176,59 +191,123 @@
   }
 
   .main-navigation a {
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
   }
+
+  /* Hero */
 
   .hero {
     min-height: 80vh;
     padding: 9rem 3rem 4rem;
   }
 
+  .hero-content {
+    max-width: 750px;
+  }
+
   .hero h1 {
-    font-size: 3.5rem;
+    font-size: clamp(3.5rem, 5vw, 4.5rem);
+  }
+
+  .hero p {
+    font-size: 1.1rem;
   }
 }
 
-/* ---------- COMPUTER ---------- */
+/* ========================================
+   DESKTOP – FRA 1024 PX
+======================================== */
 
 @media (min-width: 1024px) {
   .site-header {
     padding: 1.5rem clamp(2rem, 4.5vw, 6rem);
   }
 
+  /* Større logo */
+
   .logo {
     font-size: 3.5rem;
   }
+
+  /* Navigation */
 
   .main-navigation ul {
     gap: clamp(2.5rem, 3.5vw, 5rem);
   }
 
   .main-navigation a {
-    font-size: 0.85rem;
-    letter-spacing: 0.25em;
+    font-size: 0.95rem;
+    letter-spacing: 0.22em;
+    transition: opacity 0.2s ease;
   }
 
   .main-navigation a:hover {
     opacity: 0.7;
   }
 
+  /* Hero */
+
   .hero {
     min-height: 100vh;
     padding: 10rem 4.5rem 5rem;
   }
 
+  .hero-content {
+    max-width: 850px;
+  }
+
   .hero h1 {
-    font-size: 4.5rem;
+    font-size: clamp(4.5rem, 5vw, 6rem);
+    line-height: 1.05;
+  }
+
+  .hero p {
+    max-width: 650px;
+    font-size: 1.2rem;
+    line-height: 1.8;
   }
 }
 
-/* Respekter brugerens indstilling for reduceret animation */
+/* ========================================
+   STORE DESKTOPSKÆRME – FRA 1440 PX
+======================================== */
+
+@media (min-width: 1440px) {
+  .site-header {
+    padding: 1.75rem 4.5rem;
+  }
+
+  .logo {
+    font-size: 4rem;
+  }
+
+  .main-navigation a {
+    font-size: 1rem;
+  }
+
+  .hero {
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(5rem, 5.2vw, 7rem);
+  }
+
+  .hero p {
+    font-size: 1.3rem;
+  }
+}
+
+/* ========================================
+   REDUCERET ANIMATION
+======================================== */
 
 @media (prefers-reduced-motion: reduce) {
   .menu-toggle span,
-  .main-navigation {
+  .main-navigation,
+  .main-navigation a {
     transition: none;
   }
 }
