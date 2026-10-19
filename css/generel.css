@@ -106,7 +106,6 @@ p {
 @media (min-width: 1024px) {
   h1 {
     font-size: 4.5rem;
-    color: red;
   }
 
   h2 {

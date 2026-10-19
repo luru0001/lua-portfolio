@@ -333,7 +333,11 @@ html {
    DESKTOP – FRA 1200 PX
 ======================================== */
 
-@media (min-width: 1200px) {
+/* ========================================
+   DESKTOP – FRA 1024 PX
+======================================== */
+
+@media (min-width: 1024px) {
   .hero {
     position: relative;
     width: 100%;
@@ -358,47 +362,77 @@ html {
     object-position: right center;
   }
 
-  /* LUA – SKOV RUDKJØBING */
+  /* LUA – SKOV RUDKJØBING
+     STØRRE FRONTTEKST */
 
   .hero-text {
     position: absolute;
     z-index: 1;
-    top: 28%;
+    top: 25%;
     left: 5.5%;
-    width: 33%;
-    max-width: 650px;
+    width: 42%;
+    max-width: 780px;
     height: auto;
   }
 
-  /* STREG, PORTFOLIO OG PIL */
+  /* PORTFOLIO – STREG, TEKST OG PIL */
 
   .hero-portfolio {
     position: absolute;
     z-index: 2;
-    top: 64%;
+    top: 61%;
     left: 6%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 1.5rem;
+    color: #fff0dc;
   }
 
+  /* LÆNGERE STREG
+     TÆTTERE PÅ FRONTTEKSTEN */
+
   .portfolio-line {
-    width: 160px;
+    display: block;
+    width: 230px;
     height: 2px;
+    background-color: currentColor;
     transform: none;
     margin-bottom: 0;
   }
 
+  /* STØRRE PORTFOLIO-TEKST */
+
   .portfolio-link {
-    font-size: 1rem;
+    color: inherit;
+    font-size: 1.4rem;
     letter-spacing: 0.45em;
+    line-height: 1.5;
   }
 
+  /* STØRRE PIL */
+
   .portfolio-arrow {
-    width: 2px;
-    height: 65px;
-    margin-left: 15px;
+    position: relative;
+    display: block;
+    width: 3px;
+    height: 90px;
+    margin-left: 20px;
+    background-color: currentColor;
+    cursor: pointer;
+  }
+
+  /* PILENS SPIDS */
+
+  .portfolio-arrow span {
+    position: absolute;
+    bottom: 0;
+    left: -8px;
+    width: 20px;
+    height: 20px;
+    border-right: 3px solid currentColor;
+    border-bottom: 3px solid currentColor;
+    transform: rotate(45deg);
   }
 }
 
