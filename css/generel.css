@@ -14,38 +14,44 @@
   --radius-small: 0.5rem;
   --radius-medium: 2rem;
 }
-/* BREDDE I MAIN */
-main {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+
+/* ========================================
+   GENERELT LAYOUT
+======================================== */
+
+* {
+  box-sizing: border-box;
 }
 
-/* --- tablet ---*/
-@media (min-width: 768px) {
-  main {
-    padding: 0 3rem;
-  }
+html {
+  scroll-behavior: smooth;
 }
-/* --- desktop ---*/
-@media (min-width: 1024px) {
-  main {
-    padding: 0 1.5rem;
-  }
-  .page-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 3rem;
-  }
-}
-/* --------- FONT---------*/
+
 body {
+  margin: 0;
   background-color: var(--color-bg-primary);
   font-family: var(--font-primary);
   font-weight: 400;
   line-height: 1.5;
   color: var(--color-text-primary);
 }
+
+/* Main må bruge hele skærmens bredde */
+
+main {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ========================================
+   GENEREL TYPOGRAFI – MOBIL
+======================================== */
 
 h1 {
   font-size: 2.5rem;
@@ -70,11 +76,12 @@ p {
   font-weight: 400;
   line-height: 1.6;
 }
-/* --------- CTA---------*/
 
-/* --------- TABLET ---------*/
+/* ========================================
+   TABLET – FRA 768 PX
+======================================== */
+
 @media (min-width: 768px) {
-  /* --------- FONT---------*/
   h1 {
     font-size: 3.5rem;
   }
@@ -82,6 +89,7 @@ p {
   h2 {
     font-size: 2rem;
   }
+
   h3 {
     font-size: 1.6rem;
   }
@@ -90,9 +98,12 @@ p {
     font-size: 1.125rem;
   }
 }
-/* --------- DESKTOP ---------*/
+
+/* ========================================
+   DESKTOP – FRA 1024 PX
+======================================== */
+
 @media (min-width: 1024px) {
-  /* --------- FONT---------*/
   h1 {
     font-size: 4.5rem;
   }
@@ -100,12 +111,18 @@ p {
   h2 {
     font-size: 3rem;
   }
+
   h3 {
     font-size: 1.75rem;
   }
+
   p {
     font-size: 1.25rem;
   }
 
-  /* --------- CTA---------*/
+  .page-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem 2rem 0;
+  }
 }
