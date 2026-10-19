@@ -10,15 +10,6 @@ body {
   color: #fff0dc;
 }
 
-/* Main skal fylde hele skærmen */
-
-main {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0;
-}
-
 /* ========================================
    HERO
 ======================================== */

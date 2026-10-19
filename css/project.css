@@ -3,15 +3,9 @@
    MOBILE FIRST
 ======================================== */
 
-html {
-  scroll-behavior: smooth;
-}
-
 .project-page {
   width: 100%;
   max-width: none;
-  margin: 0;
-  padding: 0;
   background: #f5eddd;
   color: #211b18;
   font-family: var(--font-primary);
