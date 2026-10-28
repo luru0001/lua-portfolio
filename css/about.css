@@ -1,0 +1,592 @@
+/* ========================================
+   OM MIG – MOBIL FIRST
+======================================== */
+
+body {
+  margin: 0;
+  background: #160609;
+  color: #fff0dc;
+  font-family: "Onest", sans-serif;
+}
+
+.about-page {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem 6% 3rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* ========================================
+   HERO – RUNDT PORTRÆT OG VINYLPLADE
+======================================== */
+
+.about-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+/* Pladen skal ligge bag portrættet */
+
+.about-decoration {
+  position: absolute;
+  z-index: 0;
+  top: 3rem;
+  left: 50%;
+  width: 100%;
+  height: 25rem;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.about-record {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 115%;
+  max-width: 440px;
+  height: auto;
+  transform: translateX(-50%);
+}
+
+/* Rundt portræt midt på pladen */
+
+.about-portrait {
+  position: relative;
+  z-index: 2;
+  flex: 0 0 auto;
+  width: min(85%, 360px);
+  aspect-ratio: 1 / 1;
+  height: auto;
+  margin-top: 6rem;
+  overflow: hidden;
+  border: 3px solid #e54316;
+  border-radius: 50%;
+  background: #260b10;
+  box-sizing: border-box;
+}
+
+.about-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 70%;
+}
+
+/* Navn hen over den nederste del af pladen */
+
+.about-display-name {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 3rem 0.6rem 0 0;
+  color: #fff0dc;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(3.4rem, 10vw, 3.8rem);
+  font-weight: 700;
+  line-height: 0.94;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px #160609;
+}
+
+.about-display-name span:first-child {
+  white-space: nowrap;
+}
+
+.about-display-name span:last-child {
+  font-size: 0.65em;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+/* Streg og undertitel */
+
+.about-title-line {
+  position: relative;
+  z-index: 2;
+  width: 80px;
+  height: 3px;
+  margin: 1rem auto 1rem;
+  background: #fff0dc;
+}
+
+.about-keywords {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 1.5rem;
+  color: #fff0dc;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.8;
+  letter-spacing: 0.2em;
+}
+
+/* ========================================
+   BESKRIVELSE
+======================================== */
+
+.about-description {
+  position: relative;
+  margin-top: 0.5rem;
+}
+
+.about-description > p {
+  margin: 0 0 1rem;
+  color: rgba(255, 240, 220, 0.9);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.about-quote {
+  display: grid;
+  grid-template-columns: 60px minmax(0, 1fr);
+  align-items: start;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.quote-symbol {
+  color: #ff304b;
+  font-family: Georgia, serif;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 0.9;
+}
+
+.about-quote p {
+  margin: 0;
+  color: #fff0dc;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.35rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.about-quote p::after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 3px;
+  margin-top: 0.75rem;
+  background: #fff0dc;
+}
+
+/* ========================================
+   KONTAKT OG INFO
+======================================== */
+
+.about-info,
+.about-traits,
+.about-interests {
+  padding: 0.85rem 0 1rem;
+  border-top: 1px solid rgba(255, 240, 220, 0.65);
+}
+
+.about-section-heading {
+  margin: 0 0 0.85rem;
+  color: #fff0dc;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  line-height: 1.5;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.info-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 0;
+  min-height: 44px;
+  padding: 0.45rem 0.55rem;
+  box-sizing: border-box;
+  border: 1.5px solid #ff304b;
+  border-radius: 999px;
+  color: #fff0dc;
+  font-size: 0.62rem;
+  letter-spacing: 0.04em;
+  overflow-wrap: anywhere;
+}
+
+.info-icon {
+  flex: 0 0 auto;
+  color: #ff304b;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/* ========================================
+   PERSONLIGE STYRKER OG INTERESSER
+======================================== */
+
+.about-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.about-card {
+  min-width: 0;
+  text-align: center;
+}
+
+.about-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 0.5rem;
+  border: 2px solid #ff304b;
+  border-radius: 50%;
+  color: #ff304b;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.about-card h3 {
+  margin: 0 0 0.35rem;
+  color: #fff0dc;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+}
+
+.about-card p {
+  margin: 0;
+  color: rgba(255, 240, 220, 0.9);
+  font-size: 0.72rem;
+  line-height: 1.45;
+  text-align: left;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (min-width: 600px) {
+  .about-page {
+    max-width: 1000px;
+    padding: 2rem 6% 4rem;
+  }
+
+  .about-hero {
+    padding-top: 1rem;
+  }
+
+  .about-decoration {
+    top: 2.5rem;
+    width: 90%;
+    height: 38rem;
+  }
+
+  .about-record {
+    width: 110%;
+    max-width: 650px;
+  }
+
+  .about-portrait {
+    width: min(100%, 400px);
+    aspect-ratio: 1 / 1;
+    height: auto;
+    margin-top: 9rem;
+  }
+
+  .about-display-name {
+    margin-top: 10rem;
+    font-size: clamp(3.4rem, 19vw, 5.5rem);
+  }
+
+  .about-display-name span:last-child {
+    font-size: 0.65em;
+  }
+
+  .about-title-line {
+    margin-top: 1.25rem;
+  }
+
+  .about-keywords {
+    font-size: 1rem;
+    letter-spacing: 0.24em;
+  }
+
+  .about-description {
+    max-width: 750px;
+    margin: 2rem auto;
+  }
+
+  .about-description > p {
+    font-size: 1.5rem;
+  }
+
+  .about-quote {
+    grid-template-columns: 80px minmax(0, 1fr);
+  }
+
+  .about-quote p {
+    font-size: 2.5rem;
+  }
+
+  .about-section-heading {
+    font-size: 1rem;
+  }
+
+  .info-pill {
+    font-size: 1rem;
+    padding: 0.65rem 1rem;
+  }
+
+  .about-card-grid {
+    gap: 1.5rem;
+  }
+
+  .about-card-icon {
+    width: 68px;
+    height: 68px;
+    font-size: 2.2rem;
+  }
+
+  .about-card h3 {
+    font-size: 1rem;
+  }
+
+  .about-card p {
+    font-size: 1rem;
+  }
+}
+
+/* ========================================
+   DESKTOP – TO KOLONNER
+======================================== */
+
+@media (min-width: 1024px) {
+  .about-page {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 2rem;
+    row-gap: 0;
+    width: 100%;
+    max-width: 1500px;
+    padding: 10rem 4% 5rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  /* HERO: portræt til venstre, tekst til højre */
+
+  .about-hero {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas:
+      "portrait name"
+      "portrait line"
+      "portrait keywords"
+      "portrait description";
+    align-items: start;
+    justify-items: stretch;
+    column-gap: 4rem;
+    row-gap: 0;
+    text-align: left;
+    padding: 1rem 0 3rem;
+  }
+
+  /* Pladen ligger kun bag portrættet */
+
+  .about-decoration {
+    grid-area: portrait;
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    transform: translateY(-50%);
+  }
+
+  .about-record {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Rundt portræt */
+
+  .about-portrait {
+    grid-area: portrait;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    z-index: 1;
+    width: min(70%, 370px);
+    aspect-ratio: 1 / 1;
+    height: auto;
+    margin: 0;
+  }
+
+  .about-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 70%;
+  }
+
+  /* Navn */
+
+  .about-display-name {
+    grid-area: name;
+    align-self: end;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0;
+    font-size: clamp(3rem, 4.2vw, 4.5rem);
+    line-height: 0.98;
+    text-align: left;
+  }
+
+  .about-display-name span:first-child {
+    white-space: nowrap;
+  }
+
+  .about-display-name span:last-child {
+    font-size: 0.65em;
+  }
+
+  /* Streg og undertitel */
+
+  .about-title-line {
+    grid-area: line;
+    justify-self: start;
+    margin: 1rem 0;
+  }
+
+  .about-keywords {
+    grid-area: keywords;
+    align-self: start;
+    margin: 0 0 1.5rem;
+    font-size: 0.85rem;
+    line-height: 1.8;
+    letter-spacing: 0.18em;
+  }
+
+  /* Beskrivelse og citat i højre kolonne */
+
+  .about-description {
+    grid-area: description;
+    align-self: start;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .about-description > p {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .about-quote {
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 0.5rem;
+    margin: 1.25rem 0 0;
+  }
+
+  .quote-symbol {
+    font-size: 4rem;
+  }
+
+  .about-quote p {
+    font-size: clamp(1.35rem, 1.8vw, 1.8rem);
+    line-height: 1.35;
+  }
+
+  /* Kontakt: fire bokse på én linje */
+
+  .about-info {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: 1.25rem 0 1.5rem;
+    border-top: 1px solid rgba(255, 240, 220, 0.65);
+    border-bottom: 1px solid rgba(255, 240, 220, 0.65);
+    margin-top: 2rem;
+  }
+
+  .about-section-heading {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .info-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .info-pill {
+    min-height: 44px;
+    padding: 0.55rem 0.8rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.02em;
+  }
+
+  /* Styrker til venstre */
+
+  .about-traits {
+    grid-column: 1;
+    padding: 1.25rem 2rem 1.5rem 0;
+    border-top: none;
+  }
+
+  /* Interesser til højre med lodret skillelinje */
+
+  .about-interests {
+    grid-column: 2;
+    padding: 1.25rem 0 1.5rem 2rem;
+    border-top: none;
+    border-left: 1px solid rgba(255, 240, 220, 0.65);
+  }
+
+  .about-card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .about-card-icon {
+    width: 58px;
+    height: 58px;
+    font-size: 1.8rem;
+  }
+
+  .about-card h3 {
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+  }
+
+  .about-card p {
+    font-size: 0.8rem;
+    line-height: 1.45;
+  }
+}

@@ -1,0 +1,1129 @@
+/* ========================================
+   PROJECT 3 – MOSTERIET LEMONADEKARTONER
+   MOBILE FIRST
+======================================== */
+
+.project3-page {
+  --mosteri-cream: #f5eddd;
+  --mosteri-dark: #211b18;
+  --mosteri-ink: #29231e;
+  --mosteri-muted: #62574c;
+  --mosteri-accent: #a65e35;
+  --mosteri-light: #d7b68b;
+
+  /* Foreløbige farver til farvepaletten */
+  --palette-orange: #e9a044;
+  --palette-pomegranate: #a9414c;
+  --palette-lemon: #e5d66b;
+
+  width: 100%;
+  max-width: none;
+  background: var(--mosteri-cream);
+  color: var(--mosteri-ink);
+  font-family: var(--font-primary);
+}
+
+.project3-page img {
+  display: block;
+  max-width: 100%;
+}
+
+.project3-page figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.project3-page h1,
+.project3-page h2,
+.project3-page h3,
+.project3-page h4,
+.project3-page p {
+  margin-top: 0;
+}
+
+.project3-page a {
+  text-decoration: none;
+}
+
+/* ========================================
+   HERO – MOBIL
+======================================== */
+
+.project3-page .project-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: flex-end;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+  background: var(--mosteri-dark);
+  color: var(--mosteri-cream);
+}
+
+.project3-page .project-hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(20, 13, 9, 0.96) 0%,
+    rgba(20, 13, 9, 0.8) 42%,
+    rgba(20, 13, 9, 0.3) 78%,
+    rgba(20, 13, 9, 0.12) 100%
+  );
+}
+
+.project3-page .project-hero-image {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.project3-page .project-hero-content {
+  width: 100%;
+  margin: 0;
+  padding: 7rem 7% 2.5rem;
+}
+
+.project3-page .back-link {
+  display: inline-block;
+  margin-bottom: 1.3rem;
+  color: inherit;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+}
+
+.project3-page .back-link:hover {
+  text-decoration: underline;
+}
+
+.project3-page .project-number,
+.project3-page .section-kicker {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  line-height: 1.6;
+}
+
+.project3-page .project-hero h1 {
+  margin-bottom: 0.7rem;
+  font-family: "Dela Gothic One", var(--font-primary);
+  font-size: clamp(2.2rem, 10vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+.project3-page .project-year {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+}
+
+.project3-page .hero-divider {
+  display: block;
+  width: 45px;
+  height: 2px;
+  margin-bottom: 1.3rem;
+  background: currentColor;
+}
+
+.project3-page .hero-description {
+  max-width: 340px;
+  margin-bottom: 0;
+  color: rgba(245, 237, 221, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.project3-page .scroll-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.8rem;
+  color: inherit;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  line-height: 1.8;
+}
+
+.project3-page .scroll-circle {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.project3-page .scroll-link:hover .scroll-circle {
+  background: var(--mosteri-cream);
+  color: var(--mosteri-dark);
+}
+
+/* ========================================
+   OPGAVE OG LØSNING – MOBIL
+======================================== */
+
+.project3-page .project-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+  padding: 3rem 7%;
+  background: var(--mosteri-cream);
+}
+
+.project3-page .overview-column {
+  min-width: 0;
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid rgba(41, 35, 30, 0.25);
+}
+
+.project3-page .overview-column:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.project3-page .overview-column h2 {
+  margin-bottom: 0.7rem;
+  font-family: "Dela Gothic One", var(--font-primary);
+  font-size: 1.35rem;
+  font-weight: 400;
+}
+
+.project3-page .small-divider {
+  display: block;
+  width: 25px;
+  height: 2px;
+  margin-bottom: 1rem;
+  background: var(--mosteri-ink);
+}
+
+.project3-page .overview-column > p {
+  margin-bottom: 0;
+  color: var(--mosteri-muted);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.project3-page .overview-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.project3-page .detail-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project3-page .detail-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--mosteri-ink);
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+.project3-page .detail-item h3 {
+  margin-bottom: 0.2rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+}
+
+.project3-page .detail-item p {
+  margin-bottom: 0;
+  color: var(--mosteri-muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* ========================================
+   FÆLLES OVERSKRIFTER
+======================================== */
+
+.project3-page .section-heading {
+  margin-bottom: 2rem;
+}
+
+.project3-page .section-heading .section-kicker {
+  color: var(--mosteri-accent);
+}
+
+.project3-page .section-heading h2 {
+  margin-bottom: 1rem;
+  font-family: "Dela Gothic One", var(--font-primary);
+  font-size: clamp(1.8rem, 7vw, 3rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+.project3-page .section-divider {
+  display: block;
+  width: 55px;
+  height: 2px;
+  background: var(--mosteri-accent);
+}
+
+/* ========================================
+   RESULTAT / PROCESS – FANER
+======================================== */
+
+.project3-page .project-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 2rem 6%;
+  background: var(--mosteri-cream);
+}
+
+.project3-page .project-tab {
+  flex: 1;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--mosteri-dark);
+  background: transparent;
+  color: var(--mosteri-dark);
+  font-family: inherit;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.project3-page .project-tab:hover,
+.project3-page .project-tab[aria-selected="true"] {
+  background: var(--mosteri-dark);
+  color: var(--mosteri-cream);
+}
+
+.project3-page .project-tab:focus-visible,
+.project3-page a:focus-visible {
+  outline: 3px solid var(--mosteri-accent);
+  outline-offset: 4px;
+}
+
+.project3-page .project-tab-panel[hidden] {
+  display: none !important;
+}
+
+/* ========================================
+   RESULTAT – MOBIL
+======================================== */
+
+.project3-page .result-panel {
+  width: 100%;
+  padding: 2rem 6% 4rem;
+  background: var(--mosteri-cream);
+  text-align: center;
+}
+
+.project3-page .result-heading {
+  margin-bottom: 2rem;
+}
+
+.project3-page .result-heading .section-kicker {
+  color: var(--mosteri-accent);
+}
+
+.project3-page .result-heading h2 {
+  margin-bottom: 0.8rem;
+  font-family: "Dela Gothic One", var(--font-primary);
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 400;
+}
+
+.project3-page .result-intro,
+.project3-page .final-result-intro {
+  max-width: 620px;
+  margin: 0 auto 2rem;
+  color: var(--mosteri-muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.project3-page .live-site-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #eee5d6;
+}
+
+.project3-page .live-site-link img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.45s ease;
+}
+
+.project3-page .live-site-overlay {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 1.2rem 1rem;
+  background: rgba(33, 27, 24, 0.9);
+  color: var(--mosteri-cream);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-align: center;
+  transition: background-color 0.25s ease;
+}
+
+.project3-page .live-site-link:hover img {
+  transform: scale(1.025);
+}
+
+.project3-page .live-site-link:hover .live-site-overlay {
+  background: var(--mosteri-dark);
+}
+
+/* ========================================
+   KONCEPT & IDÉ – MOBIL
+======================================== */
+
+.project3-page .concept-section {
+  padding: 3.5rem 6%;
+  background: var(--mosteri-dark);
+  color: var(--mosteri-cream);
+}
+
+.project3-page .concept-section .section-heading .section-kicker {
+  color: var(--mosteri-light);
+}
+
+.project3-page .concept-section .section-heading h2 {
+  color: var(--mosteri-cream);
+}
+
+.project3-page .concept-section .section-divider {
+  background: var(--mosteri-light);
+}
+
+.project3-page .concept-work {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+}
+
+.project3-page .concept-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.project3-page .concept-intro p {
+  margin-bottom: 0;
+  color: rgba(245, 237, 221, 0.84);
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+.project3-page .concept-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(245, 237, 221, 0.3);
+}
+
+.project3-page .concept-right {
+  display: grid;
+  align-content: start;
+  gap: 1.5rem;
+  min-width: 0;
+}
+
+.project3-page .color-palette-section .section-kicker {
+  color: var(--mosteri-light);
+}
+
+.project3-page .color-palette-section h3 {
+  margin-bottom: 0.8rem;
+  font-family: "Dela Gothic One", var(--font-primary);
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.project3-page .color-palette-section > p {
+  margin-bottom: 1.5rem;
+  color: rgba(245, 237, 221, 0.84);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.project3-page .color-palette {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.project3-page .palette-color {
+  display: flex;
+  align-items: flex-end;
+  min-width: 0;
+  min-height: 130px;
+  padding: 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+/* Lyserød fra kartonernes baggrund */
+.project3-page .palette-pink {
+  background-color: #fbe4eb;
+  color: #211b18;
+}
+.project3-page .palette-color span {
+  font-size: 0.55rem;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+
+.project3-page .palette-orange {
+  background: var(--palette-orange);
+  color: #211b18;
+}
+
+.project3-page .palette-pomegranate {
+  background: var(--palette-pomegranate);
+  color: #fff8ee;
+}
+
+.project3-page .palette-lemon {
+  background: var(--palette-lemon);
+  color: #211b18;
+}
+
+/* ========================================
+   DESIGNPROCESSEN – MOBIL
+======================================== */
+
+.project3-page .process-section {
+  padding: 3.5rem 6%;
+  background: var(--mosteri-cream);
+  color: var(--mosteri-ink);
+}
+
+.project3-page .process-section .section-heading .section-kicker {
+  color: var(--mosteri-accent);
+}
+
+.project3-page .design-process-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 3rem;
+}
+
+.project3-page .design-process-block {
+  display: grid;
+  align-content: start;
+  gap: 1.5rem;
+  min-width: 0;
+}
+
+.project3-page .process-block h3 {
+  margin-bottom: 0.8rem;
+  font-family: "Dela Gothic One", var(--font-primary);
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.project3-page .process-block > p {
+  margin-bottom: 1rem;
+  color: var(--mosteri-muted);
+  font-size: 0.9rem;
+  line-height: 1.85;
+}
+
+.project3-page .process-block > p:last-child {
+  margin-bottom: 0;
+}
+
+.project3-page .process-block .section-kicker {
+  color: var(--mosteri-accent);
+}
+
+.project3-page .process-image {
+  min-width: 0;
+}
+
+.project3-page .process-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: top center;
+}
+
+.project3-page .process-image figcaption,
+.project3-page .final-packshot figcaption {
+  margin-top: 0.7rem;
+  color: var(--mosteri-accent);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
+}
+
+/* Logo – skitse og færdigt logo */
+
+.project3-page .logo-development {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.project3-page .final-logo-image {
+  padding: 1.5rem;
+  background: #fffaf1;
+}
+
+.project3-page .final-logo-image img {
+  max-width: 350px;
+  max-height: 280px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   DESIGN AF FRUGTTRÆER
+======================================== */
+
+.project3-page .fruit-design-section {
+  display: grid;
+  gap: 2rem;
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(41, 35, 30, 0.2);
+}
+
+.project3-page .tree-sketch-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.project3-page .finished-trees {
+  margin-top: 1rem;
+}
+
+.project3-page .subsection-heading {
+  margin-bottom: 1.5rem;
+}
+
+.project3-page .subsection-heading .section-kicker {
+  color: var(--mosteri-accent);
+}
+
+.project3-page .subsection-heading h4 {
+  margin-bottom: 0;
+  font-family: "Dela Gothic One", var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.project3-page .tree-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.project3-page .tree-grid figure:last-child {
+  grid-column: 1 / -1;
+  width: 70%;
+  justify-self: center;
+}
+
+.project3-page .tree-grid img {
+  width: 100%;
+  max-height: 380px;
+  object-fit: contain;
+  object-position: bottom center;
+}
+
+.project3-page .tree-grid figcaption {
+  margin-top: 0.65rem;
+  color: var(--mosteri-accent);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+/* ========================================
+   DET FÆRDIGE RESULTAT – MOBIL
+======================================== */
+
+.project3-page .final-result-section {
+  padding: 3.5rem 6%;
+  background: #eee3d1;
+  color: var(--mosteri-ink);
+}
+
+.project3-page .final-result-section .section-heading .section-kicker {
+  color: var(--mosteri-accent);
+}
+
+.project3-page .final-result-intro {
+  margin-left: 0;
+}
+
+.project3-page .finished-cartons-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+}
+
+.project3-page .finished-cartons-grid figure {
+  min-width: 0;
+}
+
+.project3-page .finished-cartons-grid img {
+  width: 100%;
+  max-width: 420px;
+  max-height: 520px;
+  margin: 0 auto;
+  object-fit: contain;
+  object-position: bottom center;
+}
+
+.project3-page .finished-cartons-grid figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.7rem;
+  color: var(--mosteri-muted);
+  font-size: 0.76rem;
+  line-height: 1.6;
+}
+
+.project3-page .finished-cartons-grid figcaption strong {
+  color: var(--mosteri-ink);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+}
+
+.project3-page .final-packshot {
+  margin-top: 3rem;
+}
+
+.project3-page .final-packshot img {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.project3-page .final-packshot figcaption {
+  text-align: center;
+}
+
+/* ========================================
+   AFSLUTNING – MOBIL
+======================================== */
+
+.project3-page .project-end {
+  padding: 4rem 1.5rem;
+  background: var(--mosteri-dark);
+  color: var(--mosteri-cream);
+  text-align: center;
+}
+
+.project3-page .project-end .section-kicker {
+  color: var(--mosteri-light);
+}
+
+.project3-page .project-end h2 {
+  margin-bottom: 2rem;
+  font-family: "Dela Gothic One", var(--font-primary);
+  font-size: clamp(1.8rem, 7vw, 3rem);
+  font-weight: 400;
+}
+
+.project3-page .back-to-portfolio {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  border: 1px solid rgba(245, 237, 221, 0.6);
+  color: var(--mosteri-cream);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.project3-page .back-to-portfolio:hover {
+  background: var(--mosteri-cream);
+  color: var(--mosteri-dark);
+}
+
+/* ========================================
+   TABLET – FRA 600 PX
+======================================== */
+
+@media (min-width: 600px) {
+  /* HERO */
+
+  .project3-page .project-hero {
+    min-height: 85svh;
+    align-items: center;
+  }
+
+  .project3-page .project-hero::after {
+    background: linear-gradient(
+      90deg,
+      rgba(20, 13, 9, 0.96) 0%,
+      rgba(20, 13, 9, 0.8) 38%,
+      rgba(20, 13, 9, 0.28) 68%,
+      rgba(20, 13, 9, 0.05) 100%
+    );
+  }
+
+  .project3-page .project-hero-content {
+    width: 65%;
+    margin-left: 5%;
+    padding: 6rem 0 3rem;
+  }
+
+  .project3-page .project-hero h1 {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+  }
+
+  /* OPGAVE OG LØSNING */
+
+  .project3-page .project-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    padding: 3.5rem 5%;
+  }
+
+  .project3-page .overview-details {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(41, 35, 30, 0.25);
+  }
+
+  /* FANER */
+
+  .project3-page .project-tabs {
+    gap: 1rem;
+    padding: 2rem 5%;
+  }
+
+  .project3-page .project-tab {
+    flex: 0 1 220px;
+  }
+
+  /* KONCEPT */
+
+  .project3-page .concept-section,
+  .project3-page .process-section,
+  .project3-page .final-result-section {
+    padding: 4rem 5%;
+  }
+
+  .project3-page .concept-work {
+    grid-template-columns:
+      minmax(0, 1fr)
+      1px
+      minmax(0, 0.9fr);
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  .project3-page .concept-intro {
+    gap: 1.25rem;
+  }
+
+  .project3-page .concept-divider {
+    width: 1px;
+    height: 100%;
+  }
+
+  .project3-page .concept-right {
+    gap: 1.5rem;
+  }
+
+  .project3-page .palette-color {
+    min-height: 150px;
+  }
+
+  /* DESIGNPROCESSEN */
+
+  .project3-page .design-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .project3-page .logo-development {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .project3-page .final-logo-image {
+    padding: 1rem;
+  }
+
+  /* FRUGTTRÆER */
+
+  .project3-page .fruit-design-section {
+    gap: 2rem;
+    margin-top: 4rem;
+    padding-top: 3rem;
+  }
+
+  .project3-page .tree-sketch-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .project3-page .tree-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project3-page .tree-grid figure:last-child {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  /* FÆRDIGE KARTONER */
+
+  .project3-page .finished-cartons-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    align-items: start;
+  }
+
+  .project3-page .finished-cartons-grid img {
+    max-width: 280px;
+    max-height: 400px;
+  }
+
+  .project3-page .final-packshot {
+    margin-top: 3.5rem;
+  }
+
+  /* RESULTAT */
+
+  .project3-page .result-panel {
+    padding: 2.5rem 5% 4.5rem;
+  }
+}
+
+/* ========================================
+   DESKTOP – FRA 1200 PX
+======================================== */
+
+@media (min-width: 1200px) {
+  /* HERO */
+
+  .project3-page .project-hero {
+    min-height: 85svh;
+  }
+
+  .project3-page .project-hero-content {
+    width: min(650px, 55%);
+    margin-left: 7%;
+  }
+
+  .project3-page .project-hero h1 {
+    font-size: clamp(3.5rem, 4.3vw, 5rem);
+  }
+
+  /* OPGAVE OG LØSNING */
+
+  .project3-page .project-overview {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1.2fr)
+      minmax(0, 0.9fr);
+    gap: 2rem;
+    padding: 3.5rem 7%;
+  }
+
+  .project3-page .overview-column {
+    padding-right: 1.5rem;
+    border-right: 1px solid rgba(41, 35, 30, 0.35);
+    border-bottom: none;
+  }
+
+  .project3-page .overview-column:nth-child(2) {
+    padding-right: 1.5rem;
+    border-right: 1px solid rgba(41, 35, 30, 0.35);
+  }
+
+  .project3-page .overview-column:last-child {
+    padding-right: 0;
+    border-right: none;
+  }
+
+  .project3-page .overview-details {
+    grid-column: auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  /* KONCEPT */
+
+  .project3-page .concept-section,
+  .project3-page .process-section,
+  .project3-page .final-result-section {
+    padding: 5rem 7%;
+  }
+
+  .project3-page .concept-work {
+    grid-template-columns:
+      minmax(0, 1.1fr)
+      1px
+      minmax(0, 0.9fr);
+    gap: 3rem;
+  }
+
+  .project3-page .concept-intro {
+    gap: 1.5rem;
+  }
+
+  .project3-page .concept-right {
+    gap: 2rem;
+  }
+
+  .project3-page .palette-color {
+    min-height: 190px;
+    padding: 1rem;
+  }
+
+  .project3-page .palette-color span {
+    font-size: 0.65rem;
+  }
+
+  /* DESIGNPROCESSEN */
+
+  .project3-page .design-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+  }
+
+  .project3-page .design-process-block {
+    gap: 2rem;
+  }
+  .project3-page .design-process-block img[src*="skitse1"] {
+    width: 55%;
+    height: auto;
+    margin-inline: auto;
+  }
+
+  .project3-page .logo-development {
+    gap: 1.5rem;
+  }
+
+  .project3-page .final-logo-image {
+    padding: 2rem;
+  }
+
+  /* skiste 2 og 3 størrelse  */
+
+  .project3-page img[src*="skitse3"] {
+    width: 45%;
+    height: auto;
+    margin-inline: auto;
+  }
+
+  .project3-page img[src*="skitse4"] {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin-inline: auto;
+  }
+  /* FRUGTTRÆER */
+
+  .project3-page .fruit-design-section {
+    margin-top: 5rem;
+    padding-top: 4rem;
+  }
+
+  .project3-page .tree-sketch-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  .project3-page .tree-grid {
+    grid-template-columns: repeat(3, minmax(0, 260px));
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .project3-page .tree-grid img {
+    max-height: 420px;
+  }
+
+  /* FÆRDIGE KARTONER */
+
+  .project3-page .finished-cartons-grid {
+    grid-template-columns: repeat(3, minmax(0, 280px));
+    justify-content: center;
+    gap: 2.5rem;
+  }
+
+  .project3-page .finished-cartons-grid img {
+    max-width: 280px;
+    max-height: 460px;
+  }
+
+  .project3-page .final-packshot {
+    margin-top: 4rem;
+  }
+
+  /* RESULTAT */
+
+  .project3-page .project-tabs {
+    padding: 2.5rem 7% 1.5rem;
+  }
+
+  .project3-page .result-panel {
+    padding: 2rem 7% 5rem;
+  }
+
+  .project3-page .project-end {
+    padding: 5rem 1.5rem;
+  }
+}
+
+/* ========================================
+   REDUCERET BEVÆGELSE
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .project3-page .project-tab,
+  .project3-page .scroll-circle,
+  .project3-page .live-site-link img,
+  .project3-page .live-site-overlay,
+  .project3-page .back-to-portfolio {
+    transition: none;
+  }
+}

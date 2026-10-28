@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="img/favi.svg" />
+
+    <title>Om mig | LUA Portfolio</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/generel.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/about.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <a href="index.html" class="logo" aria-label="LUA – forsiden"> LUA </a>
+
+      <button
+        class="menu-toggle"
+        aria-label="Åbn menu"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-navigation" id="main-navigation">
+        <ul>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="about.html" aria-current="page">Om mig</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="about-page">
+      <!-- HERO: PORTRÆT OG INTRO -->
+      <section class="about-hero">
+        <!-- Vinylplade bag portrættet -->
+        <div class="about-decoration" aria-hidden="true">
+          <img class="about-record" src="img/plade.svg" alt="" />
+        </div>
+
+        <!-- Rundt portræt -->
+        <div class="about-portrait">
+          <img src="img/lua.webp" alt="Portræt af Lua Skov Rudkjøbing" />
+        </div>
+
+        <!-- Navn -->
+        <h1 class="about-display-name">
+          <span>LUA SKOV</span>
+          <span>RUDKJØBING</span>
+        </h1>
+
+        <!-- Streg -->
+        <div class="about-title-line"></div>
+
+        <!-- Undertitel -->
+        <p class="about-keywords">
+          KREATIV, NYSGERRIG OG<br />
+          LØSNINGSORIENTERET
+        </p>
+
+        <!-- Beskrivelse og citat: ligger i højre kolonne på desktop -->
+        <section class="about-description">
+          <p>
+            Jeg er en kreativ og detaljeorienteret grafiker med en stor passion
+            for visuel kommunikation, marketing og digitale løsninger. Jeg
+            elsker at omsætte idéer til stærke visuelle udtryk, der skaber værdi
+            og fortæller en historie.
+          </p>
+
+          <p>
+            Jeg motiveres af at arbejde i krydsfeltet mellem æstetik og strategi
+            – og jeg trives i både selvstændige og samarbejdende processer, hvor
+            jeg kan bidrage med nytænkning, struktur og engagement.
+          </p>
+
+          <blockquote class="about-quote">
+            <span class="quote-symbol" aria-hidden="true">”</span>
+            <p>Jeg tror på, at godt design kan skabe forandring.</p>
+          </blockquote>
+        </section>
+      </section>
+
+      <!-- KONTAKT OG INFO: FIRE BOKSE -->
+      <section class="about-info">
+        <h2 class="about-section-heading">KONTAKT &amp; INFO</h2>
+
+        <div class="info-grid">
+          <div class="info-pill">
+            <span class="info-icon" aria-hidden="true">▦</span>
+            <span>FØDT: 03.06.1999</span>
+          </div>
+
+          <div class="info-pill">
+            <span class="info-icon" aria-hidden="true">⌖</span>
+            <span>BOR: VALBY</span>
+          </div>
+
+          <div class="info-pill">
+            <span class="info-icon" aria-hidden="true">☎</span>
+            <span>TELEFON: 12344567</span>
+          </div>
+
+          <div class="info-pill">
+            <span class="info-icon" aria-hidden="true">✉</span>
+            <span>EMAIL: luaarud</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEDERSTE DEL: STYRKER OG INTERESSER -->
+      <section class="about-traits">
+        <h2 class="about-section-heading">PERSONLIGE STYRKER</h2>
+
+        <div class="about-card-grid">
+          <article class="about-card">
+            <div class="about-card-icon" aria-hidden="true">♧</div>
+            <h3>KREATIVITET</h3>
+            <p>
+              Jeg brænder for at udvikle visuelle løsninger, der kommunikerer
+              klart og skaber følelser.
+            </p>
+          </article>
+
+          <article class="about-card">
+            <div class="about-card-icon" aria-hidden="true">♟</div>
+            <h3>SAMARBEJDE</h3>
+            <p>
+              Jeg værdsætter godt samarbejde og trives i teams, hvor idéer
+              udvikles og udfordres sammen.
+            </p>
+          </article>
+
+          <article class="about-card">
+            <div class="about-card-icon" aria-hidden="true">↗</div>
+            <h3>UDVIKLING</h3>
+            <p>
+              Jeg er nysgerrig og motiveret for at lære nyt – både fagligt og
+              personligt – og tage ansvar i mine projekter.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-interests">
+        <h2 class="about-section-heading">INTERESSER</h2>
+
+        <div class="about-card-grid">
+          <article class="about-card">
+            <div class="about-card-icon" aria-hidden="true">◎</div>
+            <h3>FOTO</h3>
+            <p>Jeg elsker at fange stemninger og detaljer gennem kameraet.</p>
+          </article>
+
+          <article class="about-card">
+            <div class="about-card-icon" aria-hidden="true">✎</div>
+            <h3>VISUELT DESIGN</h3>
+            <p>
+              Jeg bruger min fritid på at eksperimentere med design, farver og
+              komposition.
+            </p>
+          </article>
+
+          <article class="about-card">
+            <div class="about-card-icon" aria-hidden="true">♫</div>
+            <h3>MUSIK</h3>
+            <p>
+              Musik inspirerer mig og er en stor del af min kreative proces.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/header.js"></script>
+  </body>
+</html>

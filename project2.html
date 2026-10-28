@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="img/favi.svg" />
+
+    <title>Chiba Redesign | LUA Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/generel.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/project2.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Dela+Gothic+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <a href="index.html" class="logo" aria-label="LUA – forsiden"> LUA </a>
+
+      <button
+        class="menu-toggle"
+        aria-label="Åbn menu"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+        type="button"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-navigation" id="main-navigation">
+        <ul>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="about.html">Om mig</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="project-page project2-page">
+      <!-- HERO -->
+      <section class="project-hero">
+        <img
+          class="project-hero-image"
+          src="img/2/hero.webp"
+          alt="Preview af redesignet hjemmeside for Chiba"
+        />
+
+        <div class="project-hero-content">
+          <a href="portfolio.html" class="back-link">
+            ← TILBAGE TIL PROJEKTER
+          </a>
+
+          <span class="project-number">02 / 06</span>
+
+          <h1>CHIBA<br />REDESIGN</h1>
+
+          <p class="project-year">2026</p>
+
+          <span class="hero-divider"></span>
+
+          <p class="hero-description">
+            Redesign af Chibas hjemmeside med fokus på restaurantens visuelle
+            identitet, stemning og gæsteoplevelse.
+          </p>
+
+          <a href="#projektvisning" class="scroll-link">
+            <span class="scroll-circle">↓</span>
+            <span>
+              SCROLL NED<br />
+              FOR AT UDFORSKE PROJEKTET
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <!-- OPGAVE OG LØSNING -->
+      <section class="project-overview" aria-label="Projektoversigt">
+        <article class="overview-column">
+          <h2>OPGAVE</h2>
+          <span class="small-divider"></span>
+
+          <p>
+            Vi skulle finde en virksomhed med en hjemmeside, hvor designet kunne
+            forbedres, og udvikle vores eget bud på et redesign.
+          </p>
+        </article>
+
+        <article class="overview-column">
+          <h2>LØSNING</h2>
+          <span class="small-divider"></span>
+
+          <p>
+            I en gruppe udviklede vi et nyt design til Chibas hjemmeside. Vi
+            ønskede at skabe et mere indbydende og iøjnefaldende udtryk, der
+            passede bedre til restaurantens stil, stemning og identitet. Vi
+            interviewede ejeren og tog billeder af restauranten og maden, som vi
+            kunne bruge i vores visuelle materiale.
+          </p>
+        </article>
+
+        <article class="overview-column overview-details">
+          <div class="detail-item">
+            <span class="detail-icon">⌘</span>
+            <div>
+              <h3>SOFTWARE</h3>
+              <p>Visual Studio Code, Figma, Adobe Illustrator og GitHub</p>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <span class="detail-icon">◷</span>
+            <div>
+              <h3>TIDSRAMME</h3>
+              <p>2 uger</p>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <span class="detail-icon">♧</span>
+            <div>
+              <h3>SAMARBEJDE</h3>
+              <p>Gruppeprojekt med Chiba Restaurant som case</p>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <span class="detail-icon">W</span>
+            <div>
+              <h3>TYPE</h3>
+              <p>Webdesign og hjemmeside</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- RESULTAT OG PROCESS-KNAPPER -->
+      <div
+        class="project-tabs"
+        id="projektvisning"
+        role="tablist"
+        aria-label="Vælg projektvisning"
+      >
+        <button
+          class="project-tab"
+          id="tab-resultat"
+          type="button"
+          role="tab"
+          aria-selected="true"
+          aria-controls="panel-resultat"
+          data-tab="resultat"
+        >
+          Resultat
+        </button>
+
+        <button
+          class="project-tab"
+          id="tab-process"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="panel-process"
+          data-tab="process"
+        >
+          Process
+        </button>
+      </div>
+
+      <!-- RESULTAT: STANDARDVISNING -->
+      <section
+        class="project-tab-panel result-panel"
+        id="panel-resultat"
+        role="tabpanel"
+        aria-labelledby="tab-resultat"
+        data-panel="resultat"
+      >
+        <div class="result-heading">
+          <span class="section-kicker">DET FÆRDIGE RESULTAT</span>
+          <h2>CHIBA REDESIGN</h2>
+
+          <p class="result-intro">
+            Se den færdige hjemmeside ved at klikke på billedet eller knappen
+            nedenfor.
+          </p>
+        </div>
+
+        <a
+          class="live-site-link"
+          href="https://chiba-redesign.github.io/chibasite/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Åbn den færdige Chiba-hjemmeside i en ny fane"
+        >
+          <img
+            src="img/2/done.webp"
+            alt="Mockup af den færdige Chiba-redesign hjemmeside"
+            loading="lazy"
+          />
+
+          <span class="live-site-overlay">
+            BESØG DEN FÆRDIGE HJEMMESIDE ↗
+          </span>
+        </a>
+      </section>
+
+      <!-- PROCESS -->
+      <div
+        class="project-tab-panel"
+        id="panel-process"
+        role="tabpanel"
+        aria-labelledby="tab-process"
+        data-panel="process"
+        hidden
+      >
+        <!-- KONCEPT OG IDÉ -->
+        <section class="concept-section" id="koncept">
+          <div class="section-heading">
+            <span class="section-kicker">01 — PROCESSEN</span>
+            <h2>KONCEPT &amp; IDÉ</h2>
+            <span class="section-divider"></span>
+          </div>
+
+          <div class="concept-intro">
+            <p>
+              Målet var at skabe et bedre redesign af Chibas eksisterende
+              hjemmeside, så designet i højere grad afspejlede restaurantens
+              stil og budskab. Vi ville gøre siden mere indbydende, visuel og
+              inspirerende for kommende gæster.
+            </p>
+
+            <p>
+              For at få en bedre forståelse af stedet interviewede vi ejeren og
+              tog billeder af restauranten, maden og oplevelsen. Materialet blev
+              en vigtig del af vores visuelle retning og hjalp os med at skabe
+              et design med udgangspunkt i Chiba selv.
+            </p>
+          </div>
+
+          <div class="concept-work">
+            <!-- DEN GAMLE HJEMMESIDE -->
+            <figure class="before-image">
+              <img
+                src="img/2/before.webp"
+                alt="Den oprindelige hjemmeside for Chiba før redesignet"
+                loading="lazy"
+              />
+
+              <figcaption>FØR — DEN EKSISTERENDE HJEMMESIDE</figcaption>
+            </figure>
+
+            <!-- TYND OPDELER MELLEM VENSTRE OG HØJRE SIDE -->
+            <div class="concept-divider" aria-hidden="true"></div>
+
+            <!-- HØJRE SIDE -->
+            <div class="concept-right">
+              <!-- MOODBOARD OG STYLETILE -->
+              <div class="visual-guides">
+                <figure>
+                  <img
+                    src="img/2/mood.webp"
+                    alt="Moodboard med visuel inspiration til Chiba-redesignet"
+                    loading="lazy"
+                  />
+
+                  <figcaption>MOODBOARD</figcaption>
+                </figure>
+
+                <figure>
+                  <img
+                    src="img/2/styletile.webp"
+                    alt="Styletile med farver, typografi og visuelle elementer"
+                    loading="lazy"
+                  />
+
+                  <figcaption>STYLETILE</figcaption>
+                </figure>
+              </div>
+
+              <!-- BILLEDER FRA RESTAURANTEN -->
+              <div class="photo-process">
+                <div class="photo-grid">
+                  <figure>
+                    <img
+                      src="img/2/pic1.webp"
+                      alt="Billede taget til Chiba-projektet"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <figure>
+                    <img
+                      src="img/2/pic2.webp"
+                      alt="Stemningsbillede fra Chiba-projektet"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <figure>
+                    <img
+                      src="img/2/pic3.webp"
+                      alt="Billede af mad eller restaurant fra projektet"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <figure>
+                    <img
+                      src="img/2/pic4.webp"
+                      alt="Yderligere billede fra vores besøg hos Chiba"
+                      loading="lazy"
+                    />
+                  </figure>
+                </div>
+
+                <p>
+                  Vi tog selv billeder af restauranten og maden for at give
+                  hjemmesiden et personligt og autentisk udtryk. Billederne
+                  skulle formidle stemningen hos Chiba og give brugeren lyst til
+                  at opleve restauranten.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- DESIGNPROCESSEN -->
+        <section class="process-section">
+          <div class="section-heading">
+            <span class="section-kicker">02 — FRA IDÉ TIL HJEMMESIDE</span>
+            <h2>DESIGNPROCESSEN</h2>
+            <span class="section-divider"></span>
+          </div>
+
+          <div class="process-layout">
+            <!-- VENSTRE SIDE: WIREFRAMES -->
+            <div class="wireframe-column">
+              <div class="process-block">
+                <h3>LO-FI WIREFRAMES</h3>
+
+                <p>
+                  Efter at have fastlagt den visuelle stil begyndte vi at
+                  skitsere sidernes opbygning. Vi lavede lo-fi-wireframes for at
+                  planlægge indhold, navigation og brugerflow, før vi gik videre
+                  med det endelige design og kodningen.
+                </p>
+              </div>
+
+              <!-- FIRE WIREFRAMES -->
+              <div class="wireframe-grid">
+                <figure>
+                  <img
+                    src="img/2/lofi1.webp"
+                    alt="Lo-fi-wireframe af hjemmesidens forside"
+                    loading="lazy"
+                  />
+
+                  <figcaption>
+                    <strong>01 — FORSIDE</strong>
+                    <span>
+                      Introduktion til restauranten og dens univers.
+                    </span>
+                  </figcaption>
+                </figure>
+
+                <figure>
+                  <img
+                    src="img/2/lofi2.webp"
+                    alt="Lo-fi-wireframe af Om-siden"
+                    loading="lazy"
+                  />
+
+                  <figcaption>
+                    <strong>02 — OM</strong>
+                    <span>
+                      Information om Chiba og restaurantens historie.
+                    </span>
+                  </figcaption>
+                </figure>
+
+                <figure>
+                  <img
+                    src="img/2/lofi3.webp"
+                    alt="Lo-fi-wireframe af siden til booking af events"
+                    loading="lazy"
+                  />
+
+                  <figcaption>
+                    <strong>03 — BOOK EVENT</strong>
+                    <span> En side til forespørgsler og arrangementer. </span>
+                  </figcaption>
+                </figure>
+
+                <figure>
+                  <img
+                    src="img/2/lofi4.webp"
+                    alt="Lo-fi-wireframe af webshoppen"
+                    loading="lazy"
+                  />
+
+                  <figcaption>
+                    <strong>04 — WEBSHOP</strong>
+                    <span> Oversigt over produkter og købsmuligheder. </span>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <!-- HØJRE SIDE: KODNING -->
+            <aside class="coding-block">
+              <span class="section-kicker">FRA DESIGN TIL KODE</span>
+              <h3>KODNING</h3>
+
+              <p>
+                Vi kodede hjemmesidens fire sider i Visual Studio Code og brugte
+                GitHub til at samarbejde om projektet. Ved at arbejde med
+                forskellige branches kunne vi udvikle hver vores dele og
+                efterfølgende samle ændringerne i main. Det gjorde det lettere
+                for os at arbejde på samme projekt og holde styr på vores kode
+                undervejs.
+              </p>
+
+              <div class="coding-tags" aria-label="Værktøjer">
+                <span>VISUAL STUDIO CODE</span>
+                <span>GITHUB</span>
+                <span>HTML &amp; CSS</span>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <!-- DET FÆRDIGE RESULTAT I PROCESS-FANEN -->
+        <section class="final-result-section">
+          <div class="section-heading">
+            <span class="section-kicker">03 — DET FÆRDIGE RESULTAT</span>
+            <h2>DEN NYE CHIBA-HJEMMESIDE</h2>
+            <span class="section-divider"></span>
+          </div>
+
+          <p class="final-result-intro">
+            Det endelige redesign samler restaurantens visuelle udtryk på tværs
+            af hjemmesidens sider og gør det nemmere at udforske Chiba.
+          </p>
+
+          <div class="finished-site-grid">
+            <figure>
+              <img
+                src="img/2/index.webp"
+                alt="Skærmbillede af den nye Chiba-hjemmesides forside"
+                loading="lazy"
+              />
+
+              <figcaption>
+                <strong>FORSIDE</strong>
+                <span>Et visuelt første møde med Chiba.</span>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="img/2/about.webp"
+                alt="Skærmbillede af Om-siden på den nye Chiba-hjemmeside"
+                loading="lazy"
+              />
+
+              <figcaption>
+                <strong>OM CHIBA</strong>
+                <span>Restaurantens historie og identitet.</span>
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="img/2/webshop.webp"
+                alt="Skærmbillede af webshoppen på den nye Chiba-hjemmeside"
+                loading="lazy"
+              />
+
+              <figcaption>
+                <strong>WEBSHOP</strong>
+                <span>En del af hjemmesidens samlede univers.</span>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+      </div>
+
+      <!-- AFSLUTNING -->
+      <section class="project-end">
+        <span class="section-kicker">TAK FORDI DU KIGGEDE</span>
+
+        <h2>SE FLERE PROJEKTER</h2>
+
+        <a href="portfolio.html" class="back-to-portfolio">
+          ← TILBAGE TIL PORTFOLIO
+        </a>
+      </section>
+    </main>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/header.js"></script>
+    <script src="js/project-tabs.js"></script>
+  </body>
+</html>

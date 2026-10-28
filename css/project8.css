@@ -1,0 +1,544 @@
+/* ========================================
+   PROJECT 8 – ENSOMHED
+   MOBILE FIRST
+======================================== */
+
+.project8-page {
+  --lonely-cream: #f5eddd;
+  --lonely-dark: #171311;
+  --lonely-ink: #29231e;
+  --lonely-muted: #62574c;
+  --lonely-red: #c51f27;
+  --lonely-light: #e5b9b8;
+
+  width: 100%;
+  max-width: none;
+  background: var(--lonely-cream);
+  color: var(--lonely-ink);
+  font-family: var(--font-primary);
+}
+
+.project8-page img {
+  display: block;
+  max-width: 100%;
+}
+
+.project8-page figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.project8-page h1,
+.project8-page h2,
+.project8-page h3,
+.project8-page p {
+  margin-top: 0;
+}
+
+.project8-page a {
+  text-decoration: none;
+}
+
+/* ========================================
+   HERO – MOBIL
+======================================== */
+
+.project8-page .project-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: flex-end;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+  background: var(--lonely-dark);
+  color: var(--lonely-cream);
+}
+
+.project8-page .project-hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(23, 19, 17, 0.96) 0%,
+    rgba(23, 19, 17, 0.82) 42%,
+    rgba(23, 19, 17, 0.3) 78%,
+    rgba(23, 19, 17, 0.1) 100%
+  );
+}
+
+.project8-page .project-hero-image {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.project8-page .project-hero-content {
+  width: 100%;
+  margin: 0;
+  padding: 7rem 7% 2.5rem;
+}
+
+.project8-page .back-link {
+  display: inline-block;
+  margin-bottom: 1.3rem;
+  color: inherit;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+}
+
+.project8-page .back-link:hover {
+  text-decoration: underline;
+}
+
+.project8-page .project-number,
+.project8-page .section-kicker {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  line-height: 1.6;
+}
+
+.project8-page .project-hero h1 {
+  max-width: 100%;
+  margin-bottom: 0.7rem;
+  font-family: "Dela Gothic One", var(--font-primary);
+  font-size: clamp(2.4rem, 10vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.project8-page .project-year {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+}
+
+.project8-page .hero-divider {
+  display: block;
+  width: 45px;
+  height: 3px;
+  margin-bottom: 1.3rem;
+  background: var(--lonely-red);
+}
+
+.project8-page .hero-description {
+  max-width: 400px;
+  margin-bottom: 0;
+  color: rgba(245, 237, 221, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.project8-page .scroll-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.8rem;
+  color: inherit;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  line-height: 1.8;
+}
+
+.project8-page .scroll-circle {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.project8-page .scroll-link:hover .scroll-circle {
+  background: var(--lonely-cream);
+  color: var(--lonely-dark);
+}
+
+/* ========================================
+   OPGAVE OG LØSNING – MOBIL
+======================================== */
+
+.project8-page .project-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+  padding: 3rem 7%;
+  background: var(--lonely-cream);
+}
+
+.project8-page .overview-column {
+  min-width: 0;
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid rgba(41, 35, 30, 0.25);
+}
+
+.project8-page .overview-column:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.project8-page .overview-column h2 {
+  margin-bottom: 0.7rem;
+  font-family: "Dela Gothic One", var(--font-primary);
+  font-size: 1.35rem;
+  font-weight: 400;
+}
+
+.project8-page .small-divider {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 1rem;
+  background: var(--lonely-red);
+}
+
+.project8-page .overview-column > p {
+  margin-bottom: 1rem;
+  color: var(--lonely-muted);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.project8-page .overview-column > p:last-child {
+  margin-bottom: 0;
+}
+
+/* Projektinformation */
+
+.project8-page .overview-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.project8-page .detail-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project8-page .detail-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--lonely-ink);
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+.project8-page .detail-item h3 {
+  margin-bottom: 0.2rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+}
+
+.project8-page .detail-item p {
+  margin-bottom: 0;
+  color: var(--lonely-muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* ========================================
+   FÆLLES OVERSKRIFTER
+======================================== */
+
+.project8-page .section-heading {
+  margin-bottom: 2rem;
+}
+
+.project8-page .section-heading .section-kicker {
+  color: var(--lonely-red);
+}
+
+.project8-page .section-heading h2 {
+  margin-bottom: 1rem;
+  font-family: "Dela Gothic One", var(--font-primary);
+  font-size: clamp(1.8rem, 7vw, 3rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+.project8-page .section-divider {
+  display: block;
+  width: 55px;
+  height: 3px;
+  background: var(--lonely-red);
+}
+
+/* ========================================
+   DET FÆRDIGE RESULTAT – MOBIL
+======================================== */
+
+.project8-page .final-result-section {
+  padding: 3.5rem 6%;
+  background: #eee3d8;
+  color: var(--lonely-ink);
+}
+
+.project8-page .final-result-section .section-heading .section-kicker {
+  color: var(--lonely-red);
+}
+
+.project8-page .final-result-intro {
+  max-width: 680px;
+  margin: 0 0 2.5rem;
+  color: var(--lonely-muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.project8-page .loneliness-result {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project8-page .loneliness-result img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.project8-page .loneliness-result figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.2rem;
+  color: var(--lonely-muted);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.project8-page .loneliness-result figcaption strong {
+  color: var(--lonely-ink);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+
+/* ========================================
+   AFSLUTNING – MOBIL
+======================================== */
+
+.project8-page .project-end {
+  padding: 4rem 1.5rem;
+  background: var(--lonely-dark);
+  color: var(--lonely-cream);
+  text-align: center;
+}
+
+.project8-page .project-end .section-kicker {
+  color: var(--lonely-light);
+}
+
+.project8-page .project-end h2 {
+  margin-bottom: 2rem;
+  font-family: "Dela Gothic One", var(--font-primary);
+  font-size: clamp(1.8rem, 7vw, 3rem);
+  font-weight: 400;
+}
+
+.project8-page .back-to-portfolio {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  border: 1px solid rgba(245, 237, 221, 0.6);
+  color: var(--lonely-cream);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.project8-page .back-to-portfolio:hover {
+  background: var(--lonely-cream);
+  color: var(--lonely-dark);
+}
+
+/* Fokusmarkering */
+
+.project8-page a:focus-visible {
+  outline: 3px solid var(--lonely-red);
+  outline-offset: 4px;
+}
+
+/* ========================================
+   TABLET – FRA 600 PX
+======================================== */
+
+@media (min-width: 600px) {
+  .project8-page .project-hero {
+    min-height: 85svh;
+    align-items: center;
+  }
+
+  .project8-page .project-hero::after {
+    background: linear-gradient(
+      90deg,
+      rgba(23, 19, 17, 0.96) 0%,
+      rgba(23, 19, 17, 0.8) 40%,
+      rgba(23, 19, 17, 0.28) 70%,
+      rgba(23, 19, 17, 0.05) 100%
+    );
+  }
+
+  .project8-page .project-hero-content {
+    width: 60%;
+    margin-left: 5%;
+    padding: 6rem 0 3rem;
+  }
+
+  .project8-page .project-hero h1 {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+  }
+
+  .project8-page .project-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    padding: 3.5rem 5%;
+  }
+
+  .project8-page .overview-details {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(41, 35, 30, 0.25);
+  }
+
+  .project8-page .final-result-section {
+    padding: 4rem 5%;
+  }
+
+  .project8-page .loneliness-result {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    align-items: start;
+  }
+}
+
+/* ========================================
+   DESKTOP – FRA 1200 PX
+======================================== */
+
+@media (min-width: 1200px) {
+  .project8-page .project-hero {
+    min-height: 85svh;
+  }
+
+  .project8-page .project-hero-content {
+    width: min(650px, 55%);
+    margin-left: 7%;
+  }
+
+  .project8-page .project-hero h1 {
+    font-size: clamp(3.5rem, 4.3vw, 5rem);
+  }
+
+  .project8-page .project-overview {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1.2fr)
+      minmax(0, 0.9fr);
+    gap: 2rem;
+    padding: 3.5rem 7%;
+  }
+
+  .project8-page .overview-column {
+    padding-right: 1.5rem;
+    border-right: 1px solid rgba(41, 35, 30, 0.35);
+    border-bottom: none;
+  }
+
+  .project8-page .overview-column:nth-child(2) {
+    padding-right: 1.5rem;
+    border-right: 1px solid rgba(41, 35, 30, 0.35);
+  }
+
+  .project8-page .overview-column:last-child {
+    padding-right: 0;
+    border-right: none;
+  }
+
+  .project8-page .overview-details {
+    grid-column: auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .project8-page .final-result-section {
+    padding: 5rem 7%;
+  }
+
+  .project8-page .final-result-intro {
+    margin-bottom: 3rem;
+  }
+
+  .project8-page .loneliness-result {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+  }
+
+  .project8-page .loneliness-result img {
+    width: 100%;
+    max-width: none;
+  }
+
+  .project8-page .project-end {
+    padding: 5rem 1.5rem;
+  }
+  .project8-page .loneliness-result {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .project8-page .loneliness-result img:nth-child(2) {
+    align-self: center;
+  }
+  .project8-page .loneliness-result img:first-child {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* ========================================
+   REDUCERET BEVÆGELSE
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .project8-page .scroll-circle,
+  .project8-page .back-to-portfolio {
+    transition: none;
+  }
+}
