@@ -1,0 +1,262 @@
+/* ========================================
+   MAIL POPUP – 
+======================================== */
+
+/* Mailknappen */
+.email-trigger {
+  font-family: inherit;
+  text-align: left;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+.email-trigger:focus-visible {
+  outline: 2px solid #fff0dc;
+  outline-offset: 4px;
+}
+
+/* Popup – skjult som standard */
+.email-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+}
+
+.email-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Mørk, sløret baggrund */
+.email-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgb(10 2 5 / 78%);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/* Selve popup-vinduet */
+.email-modal-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 430px;
+  padding: 38px 28px 28px;
+  box-sizing: border-box;
+  border: 1px solid #e54316;
+  border-radius: 18px;
+  background: #260b10;
+  color: #fff0dc;
+  text-align: center;
+  box-shadow: 0 20px 60px rgb(0 0 0 / 45%);
+  transform: translateY(12px);
+  transition: transform 0.25s ease;
+}
+
+.email-modal.is-open .email-modal-content {
+  transform: translateY(0);
+}
+
+/* Mailikon */
+.email-modal-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 20px;
+  border: 1px solid #e54316;
+  border-radius: 50%;
+  background: #160609;
+  color: #ff6040;
+}
+
+.email-modal-icon svg {
+  width: 25px;
+  height: 25px;
+  stroke-width: 1.7;
+}
+
+/* Overskrift */
+.email-modal-content h2 {
+  margin: 0 0 12px;
+  color: #fff0dc;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.5rem, 5vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* Beskrivelse */
+.email-modal-content p {
+  margin: 0 0 22px;
+  color: rgba(255, 240, 220, 0.85);
+  font-family: "Onest", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* Mailadresse */
+.email-modal-address {
+  margin-bottom: 24px;
+  padding: 13px 10px;
+  border: 1px solid rgb(229 67 22 / 50%);
+  border-radius: 8px;
+  background: #160609;
+  color: #fff0dc;
+  font-size: 0.85rem;
+  overflow-wrap: anywhere;
+}
+
+/* Knapper */
+.email-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.email-modal-actions button {
+  min-height: 44px;
+  padding: 11px 18px;
+  border-radius: 999px;
+  font-family: "Onest", sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.email-modal-cancel {
+  border: 1px solid rgba(255, 240, 220, 0.55);
+  background: transparent;
+  color: #fff0dc;
+}
+
+.email-modal-cancel:hover {
+  background: rgba(255, 240, 220, 0.1);
+}
+
+.email-modal-confirm {
+  border: 1px solid #e54316;
+  background: #e54316;
+  color: #fff0dc;
+}
+
+.email-modal-confirm:hover {
+  border-color: #ff6040;
+  background: #ff6040;
+}
+
+.email-modal-actions button:hover {
+  transform: translateY(-2px);
+}
+
+.email-modal-actions button:focus-visible,
+.email-modal-close:focus-visible {
+  outline: 2px solid #fff0dc;
+  outline-offset: 4px;
+}
+
+/* Luk-knap */
+.email-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  color: #fff0dc;
+  font-family: "Onest", sans-serif;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.email-modal-close:hover {
+  color: #ff6040;
+}
+
+/* Mobil */
+@media (max-width: 420px) {
+  .email-modal-content {
+    padding: 36px 20px 22px;
+  }
+
+  .email-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .email-modal-actions button {
+    width: 100%;
+  }
+}
+
+/* Respekter reduceret animation */
+@media (prefers-reduced-motion: reduce) {
+  .email-modal,
+  .email-modal-content,
+  .email-modal-actions button {
+    transition: none;
+  }
+}
+
+/* ========================================
+   TELEFON POPUP – EKSTRA STYLING
+======================================== */
+
+/* Telefonnummeret skal ligne de andre kontaktbokse */
+#phone-trigger {
+  font-family: "Onest", sans-serif;
+  text-align: left;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+/* Hover-effekt på computer */
+@media (hover: hover) and (pointer: fine) {
+  #phone-trigger:hover {
+    opacity: 0.8;
+  }
+}
+
+/* Synlig fokus ved tastaturbetjening */
+#phone-trigger:focus-visible {
+  outline: 2px solid #fff0dc;
+  outline-offset: 4px;
+}
+
+/* Besked efter kopiering af nummer */
+#phone-copy-status {
+  min-height: 0;
+  margin: 0 0 16px;
+  color: #ff6040;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Ingen unødvendig afstand, før der vises en besked */
+#phone-copy-status:empty {
+  display: none;
+}

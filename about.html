@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/generel.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/contactpopup.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,7 +40,9 @@
         <ul>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="cv.html">CV</a></li>
-          <li><a href="about.html" aria-current="page">Om mig</a></li>
+          <li>
+            <a href="about.html" aria-current="page">Om mig</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -47,32 +50,27 @@
     <main class="about-page">
       <!-- HERO: PORTRÆT OG INTRO -->
       <section class="about-hero">
-        <!-- Vinylplade bag portrættet -->
         <div class="about-decoration" aria-hidden="true">
           <img class="about-record" src="img/plade.svg" alt="" />
         </div>
 
-        <!-- Rundt portræt -->
         <div class="about-portrait">
           <img src="img/lua.webp" alt="Portræt af Lua Skov Rudkjøbing" />
         </div>
 
-        <!-- Navn -->
         <h1 class="about-display-name">
           <span>LUA SKOV</span>
           <span>RUDKJØBING</span>
         </h1>
 
-        <!-- Streg -->
         <div class="about-title-line"></div>
 
-        <!-- Undertitel -->
         <p class="about-keywords">
           KREATIV, NYSGERRIG OG<br />
           LØSNINGSORIENTERET
         </p>
 
-        <!-- Beskrivelse og citat: ligger i højre kolonne på desktop -->
+        <!-- BESKRIVELSE OG CITAT -->
         <section class="about-description">
           <p>
             Jeg er en kreativ og detaljeorienteret grafiker med en stor passion
@@ -98,7 +96,7 @@
         </section>
       </section>
 
-      <!-- KONTAKT OG INFO: FIRE BOKSE -->
+      <!-- KONTAKT OG INFO -->
       <section class="about-info">
         <h2 class="about-section-heading">KONTAKT &amp; INFO</h2>
 
@@ -117,19 +115,29 @@
             <span>VALBY</span>
           </div>
 
-          <a href="tel:+4541413432" class="info-pill">
-            <span class="info-icon" aria-hidden="true">☎</span>
+          <!-- TELEFON -->
+          <a href="tel:+4541413432" class="info-pill" id="phone-trigger">
+            <span class="info-icon" aria-hidden="true">
+              <i data-lucide="phone"></i>
+            </span>
             <span>+45 41413432</span>
           </a>
 
-          <a href="mailto:luaskovrud@hotmail.com" class="info-pill">
-            <span class="info-icon" aria-hidden="true">✉</span>
+          <!-- MAIL -->
+          <button
+            type="button"
+            class="info-pill email-trigger"
+            id="email-trigger"
+          >
+            <span class="info-icon" aria-hidden="true">
+              <i data-lucide="mail"></i>
+            </span>
             <span>luaskovrud@hotmail.com</span>
-          </a>
+          </button>
         </div>
       </section>
 
-      <!-- NEDERSTE DEL: STYRKER OG INTERESSER -->
+      <!-- PERSONLIGE STYRKER -->
       <section class="about-traits">
         <h2 class="about-section-heading">PERSONLIGE STYRKER</h2>
 
@@ -167,6 +175,7 @@
         </div>
       </section>
 
+      <!-- INTERESSER -->
       <section class="about-interests">
         <h2 class="about-section-heading">INTERESSER</h2>
 
@@ -209,10 +218,107 @@
       </section>
     </main>
 
+    <!-- POPUP: SEND MAIL -->
+    <div class="email-modal" id="email-modal" aria-hidden="true">
+      <div class="email-modal-backdrop" data-close-modal></div>
+
+      <div
+        class="email-modal-content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="email-modal-title"
+        aria-describedby="email-modal-description"
+      >
+        <button
+          type="button"
+          class="email-modal-close"
+          aria-label="Luk vindue"
+          data-close-modal
+        >
+          &times;
+        </button>
+
+        <div class="email-modal-icon" aria-hidden="true">
+          <i data-lucide="mail"></i>
+        </div>
+
+        <h2 id="email-modal-title">Vil du sende en mail?</h2>
+
+        <p id="email-modal-description">
+          Du bliver sendt videre til dit mailprogram, hvor du kan skrive en
+          besked.
+        </p>
+
+        <div class="email-modal-address">luaskovrud@hotmail.com</div>
+
+        <div class="email-modal-actions">
+          <button type="button" class="email-modal-cancel" data-close-modal>
+            Annuller
+          </button>
+
+          <button
+            type="button"
+            class="email-modal-confirm"
+            id="email-modal-confirm"
+          >
+            Ja, fortsæt
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- POPUP: TELEFONNUMMER -->
+    <div class="email-modal" id="phone-modal" aria-hidden="true">
+      <div class="email-modal-backdrop" data-close-phone-modal></div>
+
+      <div
+        class="email-modal-content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="phone-modal-title"
+        aria-describedby="phone-modal-description"
+      >
+        <button
+          type="button"
+          class="email-modal-close"
+          aria-label="Luk vindue"
+          data-close-phone-modal
+        >
+          &times;
+        </button>
+
+        <div class="email-modal-icon" aria-hidden="true">
+          <i data-lucide="phone"></i>
+        </div>
+
+        <h2 id="phone-modal-title">Kontakt mig</h2>
+
+        <p id="phone-modal-description">
+          Hvad vil du gerne gøre med mit telefonnummer?
+        </p>
+
+        <div class="email-modal-address">+45 41413432</div>
+
+        <p id="phone-copy-status" aria-live="polite"></p>
+
+        <div class="email-modal-actions">
+          <button type="button" class="email-modal-cancel" id="phone-copy">
+            Kopiér nummer
+          </button>
+
+          <button type="button" class="email-modal-confirm" id="phone-message">
+            Send en besked
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
     <script src="js/header.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
       lucide.createIcons();
     </script>
+    <script src="js/about.js"></script>
   </body>
 </html>
