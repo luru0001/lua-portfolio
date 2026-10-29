@@ -227,12 +227,33 @@ body {
 }
 
 .info-icon {
-  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 1.3rem;
   color: #ff304b;
   font-size: 1.3rem;
   font-weight: 700;
+  line-height: 1;
 }
 
+.info-icon svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 1.7;
+}
+
+.info-pill {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.info-pill:hover {
+  opacity: 0.8;
+}
 /* ========================================
    PERSONLIGE STYRKER OG INTERESSER
 ======================================== */
@@ -276,7 +297,7 @@ body {
   color: rgba(255, 240, 220, 0.9);
   font-size: 0.72rem;
   line-height: 1.45;
-  text-align: left;
+  text-align: center;
 }
 
 /* ========================================
